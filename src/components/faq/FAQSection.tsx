@@ -7,29 +7,27 @@ import {
 
 export const FAQSection = () => {
   return (
-    <div className="p-8 bg-gradient-to-b from-[#170E5C] to-[#251B73] min-h-screen">
-      <div className="max-w-xl mx-auto text-white">
-        <h1 className="mt-32 font-cormo text-[#F1C57C] text-[96px] text-center">
-          FAQs
-        </h1>
+    <div className="w-full mx-auto text-white">
+      <h1 className="mt-32  font-cormo text-[#F1C57C] text-[96px] text-center">
+        FAQs
+      </h1>
 
-        <Accordion type="multiple" className="space-y-6">
-          {FAQ_CONTENT.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={faq.q}
-              className=" rounded-xl bg-[#3F458C] text-white border-none"
-            >
-              <AccordionTrigger className="hover:cursor-pointer hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[16px] font-poppins border-none">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+      <Accordion type="multiple" className="space-y-6 max-w-2xl mx-auto">
+        {FAQ_CONTENT.map((faq, index) => (
+          <AccordionItem
+            key={index}
+            value={faq.q}
+            className="rounded-xl w-full bg-[#3F458C] text-white border-none"
+          >
+            <AccordionTrigger className="hover:cursor-pointer hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
+              {faq.q}
+            </AccordionTrigger>
+            <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[16px] font-poppins border-none">
+              {faq.a}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </div>
   );
 };

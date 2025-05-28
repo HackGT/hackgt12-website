@@ -5,6 +5,8 @@ import { AboutPage } from "./components/about/AboutPage";
 import { Room } from "./components/Room";
 import { HeroPage } from "./components/hero/HeroPage";
 import { FAQSection } from "./components/faq/FAQSection";
+import { SponsorsSection } from "./components/sponsors/SponsorsSection";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,8 +62,12 @@ function App() {
       </section>
 
       {/* Vertical scroll resumes */}
-      <section className="">
-        <FAQSection />
+      <section className=" bg-gradient-to-b from-[#170E5C] to-[#251B73] min-h-screen">
+        <div className="p-8 flex flex-col gap-32">
+          <FAQSection />
+          <SponsorsSection />
+        </div>
+        <Footer />
       </section>
     </div>
   );
