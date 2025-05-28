@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar";
 import { AboutPage } from "./components/about/AboutPage";
 import { Room } from "./components/Room";
 import { HeroPage } from "./components/hero/HeroPage";
+import { FAQSection } from "./components/faq/FAQSection";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,9 @@ function App() {
       </section>
 
       {/* Vertical scroll resumes */}
-      <section className="h-screen bg-green-200">Back to Vertical</section>
+      <section className="">
+        <FAQSection />
+      </section>
     </div>
   );
 }
