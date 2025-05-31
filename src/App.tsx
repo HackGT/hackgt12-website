@@ -7,6 +7,7 @@ import { HeroPage } from "./components/hero/HeroPage";
 import { FAQSection } from "./components/faq/FAQSection";
 import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
+import TimelinePage from "./components/timeline/TimelinePage";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,9 +55,7 @@ function App() {
             >
               Room 2
             </div>
-            <div className="w-screen snap-start h-screen bg-blue-500 flex items-center justify-center text-4xl">
-              Room 3
-            </div>
+            <TimelinePage />
           </div>
         </div>
       </section>
