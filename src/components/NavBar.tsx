@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 export const NavBar = () => {
   return (
-    <nav className="z-100 fixed w-full top-0 shadow-md">
+    <nav className="z-100 fixed w-full top-0">
       <div className="relative w-full">
         <SpotlightImage className="left-70" type="right" />
         <SpotlightImage className="left-170" type="right" />
@@ -24,7 +24,7 @@ const NavLink = ({ title, href }: { title: string; href: string }) => {
   return (
     <a
       href={href}
-      className="font-cormo text-[40px] text-[#F1C57C] hover:text-[#f2a11b]"
+      className="font-cormo text-[40px] text-theme-gold hover:text-[#f2a11b]"
     >
       {title}
     </a>
