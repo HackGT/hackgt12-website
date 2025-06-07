@@ -7,33 +7,30 @@ export const HeroPage = () => {
         alt="Background column"
       />
 
-      <div className="absolute top-0 h-full w-[48vw] min-w-[320px] z-10 flex items-end justify-center ml-[4vw]">
-        <img
-          src="/home-entrance.svg"
-          className="absolute bottom-0 w-full h-auto max-h-[calc(100vh-160px)]"
-          alt="Entrance Arch"
-        />
+      <div className="absolute bottom-0 w-full flex flex-col items-center translate-x-[-20%]">
+        <div className="relative w-auto max-h-[calc(100vh-145px)]">
+          <img
+            src="/home-entrance.svg"
+            className="max-h-[calc(100vh-160px)] w-auto"
+            alt="Entrance Arch"
+          />
 
-        <div className="z-20 flex flex-col items-center justify-start w-full text-center">
-          <div className="mb-6">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <img src="/home-logo.svg" alt="Logo" className="w-[40px] md:w-[60px]" />
-              <h1 className="font-cormo font-bold text-4xl md:text-6xl text-theme-gold">
-                HackGT 12
-              </h1>
-            </div>
-            <h2 className="font-poppins text-theme-gold text-lg md:text-2xl mb-4">
+          <img
+            src="/home-stanchion.svg"
+            className="absolute bottom-0 left-1/2 translate-x-[-50%] w-[50%]"
+            alt="Entrance Stanchion"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <img src="/title.svg" alt="HackGT 12" className="w-[86%] h-auto" />
+          <div className="mb-[6%] w-full max-w-full px-4">
+            <h2 className="font-poppins text-theme-gold text-[3.5vh] mb-[1.2em]">
               midnights at the museum
             </h2>
-            <button className="bg-theme-gold font-cormo font-bold text-[#771500] cursor-pointer rounded-3xl px-7 py-1 text-lg md:text-2xl hover:brightness-110 transition">
+            <button className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-7 py-1 text-[4vh] cursor-pointer hover:brightness-110 transition">
               Register
             </button>
           </div>
-          <img
-            src="/home-stanchion.svg"
-            className="w-[48%] z-10"
-            alt="Stanchion"
-          />
+        </div>
         </div>
       </div>
 
