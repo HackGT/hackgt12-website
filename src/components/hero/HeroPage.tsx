@@ -10,13 +10,13 @@ export const HeroPage = () => {
       <div className="absolute bottom-0 w-full flex flex-col items-center translate-x-[-20%]">
         <div className="relative w-auto max-h-[calc(100vh-145px)]">
           <img
-            src="/home-entrance.svg"
+            src="/home_entrance.svg"
             className="max-h-[calc(100vh-160px)] w-auto"
             alt="Entrance Arch"
           />
 
           <img
-            src="/home-stanchion.svg"
+            src="/home_stanchion.svg"
             className="absolute bottom-0 left-1/2 translate-x-[-50%] w-[50%]"
             alt="Entrance Stanchion"
           />
@@ -24,7 +24,7 @@ export const HeroPage = () => {
           <img src="/title.svg" alt="HackGT 12" className="w-[86%] h-auto" />
           <div className="mb-[6%] w-full max-w-full px-4">
             <h2 className="font-poppins text-theme-gold text-[3.5vh] mb-[1.2em]">
-              midnights at the museum
+              midnight at the museum
             </h2>
             <button className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-7 py-1 text-[4vh] cursor-pointer hover:brightness-110 transition">
               Register

@@ -7,6 +7,7 @@ import { HeroPage } from "./components/hero/HeroPage";
 import { FAQSection } from "./components/faq/FAQSection";
 import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
+import { TracksPage } from "./components/tracks/TracksPage";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,12 +49,7 @@ function App() {
             className="snap-x flex w-[300vw] bg-green-400 h-screen transition-transform ease-out scroll-smooth"
           >
             <AboutPage />
-            <div
-              className="w-screen snap-start h-screen bg-blue-400 flex items-center justify-center text-4xl"
-              id="room2"
-            >
-              Room 2
-            </div>
+            <TracksPage />
             <div className="w-screen snap-start h-screen bg-blue-500 flex items-center justify-center text-4xl">
               Room 3
             </div>

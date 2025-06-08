@@ -24,7 +24,7 @@ const NavLink = ({ title, href }: { title: string; href: string }) => {
   return (
     <a
       href={href}
-      className="font-cormo text-[40px] text-theme-gold hover:text-[#f2a11b]"
+      className="font-bold font-cormo text-[4.5vh] text-theme-gold hover:brightness-110 transition"
     >
       {title}
     </a>
