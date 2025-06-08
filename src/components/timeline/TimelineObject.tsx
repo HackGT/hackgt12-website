@@ -6,7 +6,6 @@ export type TimelineObject_t = {
 	desc: string;
 	time: string;
 	icon_path: string;
-	reffn: (el: HTMLDivElement) => void;
 }
 
 type ExtraProps = {
@@ -18,7 +17,6 @@ type ExtraProps = {
 const TimelineObject = (props: TimelineObject_t & ExtraProps) => {
 	return (
 		<div 
-		ref={props.reffn}
 		id={`tl-object-${props.number}`}
 		className={`tl-object-wrapper ${props.is_on_top? 'is_top' : 'is_bottom'}`} 
 		style={props.style}>

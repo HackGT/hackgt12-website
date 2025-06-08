@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState } from 'react'
+import React, {useCallback, useEffect, useState } from 'react'
 import './tlstyles.css'
 import EventCard from './EventCard';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -31,28 +31,8 @@ const PageContainer = ({children}: {children?: React.ReactNode}) =>
 	</div>
 
 const TimelinePage = () => {
-	const timelineLineRef = useRef<HTMLDivElement>(null);
-	const topEventContainerRef = useRef<HTMLDivElement>(null);
-	const bottomEventContainerRef = useRef<HTMLDivElement>(null);
-
 	const [selectedDay, setSelectedDay] = useState<1|2|3>(1);
 	const [selectedEventIdx, setSelectedEventIdx] = useState<number>(0);
-
-	const topEventsRefs = useRef<Record<number, HTMLDivElement>>({});
-	const bottomEventsRefs = useRef<Record<number, HTMLDivElement>>({});
-	const [timelineLineLength, setTimelineLineLength] = useState(0);
-	useEffect(() => {
-		let topElementsWidth = 0;
-		let bottomElementsWidth = 0;
-
-		Object.values(topEventsRefs.current).forEach((el) => {
-			if (el) topElementsWidth += el.clientWidth;
-		});
-		Object.values(bottomEventsRefs.current).forEach((el) => {
-			if (el) bottomElementsWidth += el.clientWidth;
-		});
-		setTimelineLineLength(Math.max(topElementsWidth, bottomElementsWidth) + 50);
-	}, [selectedDay]);
 
 	const [timelineHalves, setTimelineHalves] = useState(partitionInto2Arrays<TimelineObject_t>(EVENTS[selectedDay-1] as TimelineObject_t[]));
 
@@ -65,8 +45,8 @@ const TimelinePage = () => {
 	useEffect(() => {
 		const newHalves = partitionInto2Arrays<TimelineObject_t>(EVENTS[selectedDay-1] as TimelineObject_t[]);
 		setTimelineHalves(newHalves);
-		setSelectedEventIdx(0); // reset to first event of the day
-	}, [selectedDay]);
+		setSelectedEventIdx(Math.min(EVENTS[selectedDay-1].length - 1, selectedEventIdx));
+	}, [selectedDay, selectedEventIdx]);
 
 	// flash effect when switching selectedEventIdx
 	useEffect(() => {
@@ -74,7 +54,7 @@ const TimelinePage = () => {
 		ele?.classList.add('flash');
 		const t = setTimeout(() => {
 			ele?.classList.remove('flash');
-		}, 1500); // important: check the flash animations in ./tlstyles.css, should match this timing 
+		}, 1000); // important: check the flash animations in ./tlstyles.css, should match this timing 
 
 		return () => {
 			// insta-end animation if they change to another event
@@ -97,20 +77,14 @@ const TimelinePage = () => {
 				</div>
 
 				<div className='timeline-container'>
-					<div 
-					className='timeline-line' 
-					ref={timelineLineRef}>
+					<div className='timeline-line'>
 						<div 
 						style={{
 							transform: `translateX(${(EVENTS[selectedDay-1].length % 2 === 0)? '-3' : 0}rem)`,
 						}}
-						className='timeline-group top' 
-						ref={topEventContainerRef}>
+						className='timeline-group top'>
 							{timelineHalves[0].map((ele, index) => (
 								<TimelineObject
-								reffn={(el: HTMLDivElement) => {
-									topEventsRefs.current[index] = el;
-								}}
 								key={`toptl-${index}`}
 								name={ele.name}
 								time={ele.time}
@@ -124,13 +98,9 @@ const TimelinePage = () => {
 						style={{
 							transform: `translateX(${(EVENTS[selectedDay-1].length % 2 === 0)? '3' : 0}rem)`,
 						}}
-						className='timeline-group bottom' 
-						ref={bottomEventContainerRef}>
+						className='timeline-group bottom'>
 							{timelineHalves[1].map((ele, index) => (
 								<TimelineObject
-								reffn={(el: HTMLDivElement) => {
-									bottomEventsRefs.current[index] = el;
-								}}
 								key={`bottomtl-${index}`}
 								name={ele.name}
 								time={ele.time}
