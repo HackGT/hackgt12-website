@@ -11,10 +11,12 @@ export const AboutPage = () => {
               What is HackGT?
             </h1>
             <p className="text-[20px] text-white font-poppins">
-              Shape the future at the 🎪 Circus of Inventions from September
-              27th to September 29th! 🎡 The 11th edition of our flagship
-              hackathon brings you a transformed carnival of creativity for all
-              innovators, builders, and visionaries.
+              Shape the future at the 🎪 Circus of Inventions from{" "}
+              <span className="underline">Friday, September 26th</span> to{" "}
+              <span className="underline">Sunday, September 28th</span>! 🎡 The
+              11th edition of our flagship hackathon brings you a transformed
+              carnival of creativity for all innovators, builders, and
+              visionaries.
             </p>
             <p className="text-[20px] mt-8 text-white font-poppins">
               Each year, HackGT welcomes over 1500+ hackers 🤹 from around the
