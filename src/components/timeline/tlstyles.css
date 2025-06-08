@@ -1,0 +1,232 @@
+.tlpage-bg {
+	/* third page in horiz scroll - colors copied from figma */
+	background-image: linear-gradient(to bottom, #021E0E, #023C1C);
+}
+
+.day-selector {
+	display: flex;
+	border-radius: 1000px;
+	background-color: #B5C5C3;
+	padding: 5px;
+	gap: 5px;
+}
+.day-selector-option {
+	border-radius: 1000px;
+	background-color: transparent;
+	cursor: pointer;
+	color: black;
+	padding: 0 1em;
+	transition: background-color 0.1s;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.day-selector-option:hover {
+	background-color: #00342720;
+}
+.day-selector-option.selected {
+	background-color: #003427;
+	color: white;
+}
+
+.eventcard {
+	background-color: white;
+	border-radius: 16px;
+	overflow: hidden;
+	max-width: 500px;
+}
+.eventcard-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	padding: 0.2em 1.2em;
+	background-color: #B5C5C3;
+}
+.eventcard-desc {
+	padding: 1em 2em;
+	font-size: 1rem;
+}
+.eventcard-rounded-button {
+	border-radius: 1000px;
+	background-color: white;
+	padding: 0.4em;
+	height: fit-content;
+	width: fit-content;
+	cursor: pointer;
+	transition: transform 0.1s ease-out;
+}
+.floatright-on-hover:hover {
+	transform: translateX(5px);
+}
+.floatleft-on-hover:hover {
+	transform: translateX(-5px);
+}
+
+/* ACTUAL TIMELINE */
+.timeline-container {
+	width: 100%;
+	padding: 4em 0;
+
+	--distance-from-line: 2.5em;
+	--timeline-line-thickness: 5px;
+}
+
+.timeline-line {
+	margin: 4em 0;
+	position: relative;
+	height: 5px;
+	z-index: 1;
+	background-color: #eac786;
+	box-shadow: 0px 3px 10px 12px #0002;
+	overflow-y: visible;
+	padding: 0 2rem;
+}
+.timeline-line::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 1em;
+	height: 1em;
+	border-radius: 100%;
+	background-color: #eac786;
+}
+.timeline-line::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 1em;
+	height: 1em;
+	border-radius: 100%;
+	background-color: #eac786;
+}
+
+.timeline-group {
+	position: relative;
+	display: flex;
+	gap: 4rem;
+	justify-content: center;
+}
+.timeline-group.top {
+	top: calc(-2*var(--distance-from-line));
+}
+.timeline-group.bottom {
+	bottom: calc(2*var(--timeline-line-thickness));
+}
+
+
+.tl-object-wrapper {
+	display: flex;
+	gap: 0.4em;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 0.5em;
+	position: relative;
+	z-index: 100;
+	/* so that theyre all vertically centered with each other. x-pos set dynamically */
+	/* top: 50%;
+	transform: translateY(-50%); */
+}
+.tl-object-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1000px;
+	width: 2em;
+	height: 2em;
+	background-color: white;
+	color: black;
+	font-size: 0.75rem;
+}
+.tl-object-label {
+	text-wrap: nowrap;
+	font-family: Garamond;
+	font-size: 1.25rem;
+	color: white;
+}
+.tl-object-icon {
+	width: 2em;
+	height: 2em;
+}
+
+/* add vertical line connecting to timeline below the object */
+.tl-object-wrapper.is_top::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: var(--distance-from-line);
+	background-color: #eac786;
+}
+.tl-object-wrapper.is_bottom::before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: var(--distance-from-line);
+	background-color: #eac786;
+}
+.tl-object-wrapper.is_top::after {
+	content: '';
+	position: absolute;
+	bottom: calc(0px - var(--distance-from-line) - var(--timeline-line-thickness)/2);
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1em;
+	height: 1em;
+	z-index: 200;
+	border-radius: 100%;
+	background-color: #eac786;
+}
+.tl-object-wrapper.is_bottom::after {
+	content: '';
+	position: absolute;
+	top: calc(0px - var(--distance-from-line) - var(--timeline-line-thickness)/2);
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1em;
+	height: 1em;
+	z-index: 200;
+	border-radius: 100%;
+	background-color: #eac786;
+}
+
+@keyframes bgFlash {
+	0% {
+		background-color: #ffc457;
+		box-shadow: 0px 0px 40px 10px #ffc457;
+	}
+	60% {
+		background-color: #ffc457;
+		box-shadow: 0px 0px 40px 10px #ffc457;
+	}
+	100% {
+		background-color: white;
+		box-shadow: 0px 0px 40px 10px transparent;
+	}
+}
+@keyframes textFlash {
+	0% {
+		color: #ffc457;
+	}
+	60% {
+		color: #ffc457;
+	}
+	100% {
+		color: white;
+	}
+}
+
+.tl-object-wrapper.flash .tl-object-number {
+	animation: bgFlash 1s ease-out;
+}
+
+.tl-object-wrapper.flash .tl-object-label {
+	animation: textFlash 1s ease-out;
+}

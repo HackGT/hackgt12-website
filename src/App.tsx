@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import { AboutPage } from "./components/about/AboutPage";
-import { Room } from "./components/Room";
 import { HeroPage } from "./components/hero/HeroPage";
 import { FAQSection } from "./components/faq/FAQSection";
 import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
+import TimelinePage from "./components/timeline/TimelinePage";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,20 +44,29 @@ function App() {
       <section ref={containerRef} className="relative h-[300vh]">
         <div className="sticky top-0 h-screen overflow-hidden">
           <div
-            ref={contentRef}
-            className="snap-x flex w-[300vw] bg-green-400 h-screen transition-transform ease-out scroll-smooth"
-          >
+          ref={contentRef}
+          className="position-relative snap-x flex w-[300vw] bg-green-400 h-screen transition-transform ease-out scroll-smooth">
             <AboutPage />
+            
+            <img className="pillar1" src="/about_pillar.png"></img>
+            
             <div
               className="w-screen snap-start h-screen bg-blue-400 flex items-center justify-center text-4xl"
               id="room2"
             >
               Room 2
             </div>
-            <div className="w-screen snap-start h-screen bg-blue-500 flex items-center justify-center text-4xl">
-              Room 3
-            </div>
+
+            <img className="pillar2" src="/about_pillar.png"></img>
+            
+            <TimelinePage />
           </div>
+
+          <img
+          src="/about_floor.png"
+          alt="________"
+          className="horiz-scroll-floor"/>
+
         </div>
       </section>
 
