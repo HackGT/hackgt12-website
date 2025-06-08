@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useReducer, useRef, useState } from 'react'
+import React, {useCallback, useEffect, useRef, useState } from 'react'
 import './tlstyles.css'
 import EventCard from './EventCard';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
@@ -38,11 +38,26 @@ const TimelinePage = () => {
 	const [selectedDay, setSelectedDay] = useState<1|2|3>(1);
 	const [selectedEventIdx, setSelectedEventIdx] = useState<number>(0);
 
+	const topEventsRefs = useRef<Record<number, HTMLDivElement>>({});
+	const bottomEventsRefs = useRef<Record<number, HTMLDivElement>>({});
+	const [timelineLineLength, setTimelineLineLength] = useState(0);
+	useEffect(() => {
+		let topElementsWidth = 0;
+		let bottomElementsWidth = 0;
+
+		Object.values(topEventsRefs.current).forEach((el) => {
+			if (el) topElementsWidth += el.clientWidth;
+		});
+		Object.values(bottomEventsRefs.current).forEach((el) => {
+			if (el) bottomElementsWidth += el.clientWidth;
+		});
+		setTimelineLineLength(Math.max(topElementsWidth, bottomElementsWidth) + 50);
+	}, [selectedDay]);
+
 	const [timelineHalves, setTimelineHalves] = useState(partitionInto2Arrays<TimelineObject_t>(EVENTS[selectedDay-1] as TimelineObject_t[]));
 
 	const updateIdx = useCallback((newIdx: number) => {
 		const numEventsThisDay = EVENTS[selectedDay-1].length;
-		console.log(`Updating selectedEventIdx to ${newIdx}, # events today: ${numEventsThisDay} (selectedDay: ${selectedDay})`);
 		if (newIdx < 0 || newIdx >= numEventsThisDay) return;
 		else setSelectedEventIdx(newIdx);
 	}, [selectedDay]);
@@ -82,33 +97,49 @@ const TimelinePage = () => {
 				</div>
 
 				<div className='timeline-container'>
-					<div className='timeline-group top' ref={topEventContainerRef}>
-						{timelineHalves[0].map((ele, index) => (
-							<TimelineObject
-							key={`toptl-${index}`}
-							name={ele.name}
-							time={ele.time}
-							desc={ele.desc}
-							icon_path={ele.icon_path}
-							number={2*index+1}
-							is_on_top />
-						))}
-					</div>
 					<div 
 					className='timeline-line' 
-					style={{width: (Math.max(topEventContainerRef.current?.clientWidth || 0, bottomEventContainerRef.current?.clientWidth || 0) + 50) + 'px'}}
-					ref={timelineLineRef} />
-					<div className='timeline-group bottom' ref={bottomEventContainerRef}>
-						{timelineHalves[1].map((ele, index) => (
-							<TimelineObject
-							key={`bottomtl-${index}`}
-							name={ele.name}
-							time={ele.time}
-							desc={ele.desc}
-							icon_path={ele.icon_path}
-							number={2*index+2}
-							is_on_top={false} />
-						))}
+					ref={timelineLineRef}>
+						<div 
+						style={{
+							transform: `translateX(${(EVENTS[selectedDay-1].length % 2 === 0)? '-3' : 0}rem)`,
+						}}
+						className='timeline-group top' 
+						ref={topEventContainerRef}>
+							{timelineHalves[0].map((ele, index) => (
+								<TimelineObject
+								reffn={(el: HTMLDivElement) => {
+									topEventsRefs.current[index] = el;
+								}}
+								key={`toptl-${index}`}
+								name={ele.name}
+								time={ele.time}
+								desc={ele.desc}
+								icon_path={ele.icon_path}
+								number={2*index+1}
+								is_on_top />
+							))}
+						</div>
+						<div 
+						style={{
+							transform: `translateX(${(EVENTS[selectedDay-1].length % 2 === 0)? '3' : 0}rem)`,
+						}}
+						className='timeline-group bottom' 
+						ref={bottomEventContainerRef}>
+							{timelineHalves[1].map((ele, index) => (
+								<TimelineObject
+								reffn={(el: HTMLDivElement) => {
+									bottomEventsRefs.current[index] = el;
+								}}
+								key={`bottomtl-${index}`}
+								name={ele.name}
+								time={ele.time}
+								desc={ele.desc}
+								icon_path={ele.icon_path}
+								number={2*index+2}
+								is_on_top={false} />
+							))}
+						</div>
 					</div>
 				</div>
 				<div className='day-selector'>{[1, 2, 3].map((n) => 
