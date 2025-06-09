@@ -125,3 +125,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  --about-floor-height: min(10vh, 50px);
+}
+
+.pillar1 {
+  position: absolute;
+  height: calc(100% - var(--about-floor-height));
+  left: calc(100vw); /* pillar SVG is 352 wide */ 
+  bottom: var(--about-floor-height);
+  transform: translateX(-50%);
+}
+.pillar2 {
+  position: absolute;
+  height: calc(100% - var(--about-floor-height));
+  left: calc(200vw); /* pillar SVG is 352px wide */
+  bottom: var(--about-floor-height);
+  transform: translateX(-50%);
+}
+
+.horiz-scroll-floor {
+  position: absolute;
+  bottom: 0;
+  height: var(--about-floor-height);
+  width: 100vw;
+}

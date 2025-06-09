@@ -17,9 +17,9 @@ export const FAQSection = () => {
           <AccordionItem
             key={index}
             value={faq.q}
-            className="rounded-xl w-full bg-[#3F458C] text-white border-none"
+            className="rounded-xl w-full bg-[#2F2090] text-white border-none"
           >
-            <AccordionTrigger className="hover:cursor-pointer hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
+            <AccordionTrigger className="hover:cursor-pointer bg-[#3F458C] hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
               {faq.q}
             </AccordionTrigger>
             <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[16px] font-poppins border-none">
