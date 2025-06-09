@@ -86,7 +86,7 @@ function App() {
             <AboutPage />
             
             <img
-              className="pillar1 hidden lg:block"
+              className="pillar1 hidden lg:block z-50"
               src="/about_pillar.png"
             ></img>
 
