@@ -51,7 +51,7 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
     <div
       className={twMerge(
         "max-w-7xl mx-auto flex-col justify-between items-center px-4 py-2 transition-all",
-        isAtTop ? "" : "backdrop-blur-md", // Apply background and blur here when not at top
+        isOpen ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
         className
       )}
     >
@@ -111,7 +111,7 @@ const NavLink = ({ title, href }: { title: string; href: string }) => {
   return (
     <a
       href={href}
-      className="font-cormo w-full text-center text-[24px] lg:text-[40px] text-theme-gold hover:text-[#f2a11b]"
+      className="font-cormo w-full text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-110 transition"
     >
       {title}
     </a>

@@ -6,6 +6,7 @@ import { HeroPage } from "./components/hero/HeroPage";
 import { FAQSection } from "./components/faq/FAQSection";
 import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
+import { TracksPage } from "./components/tracks/TracksPage";
 import TimelinePage from "./components/timeline/TimelinePage";
 
 function App() {
@@ -83,18 +84,13 @@ function App() {
             }`}
           >
             <AboutPage />
-
+            
             <img
-              className="pillar1 hidden lg:block"
+              className="pillar1 hidden lg:block z-50"
               src="/about_pillar.png"
             ></img>
 
-            <div
-              className="w-screen snap-start h-screen bg-blue-400 flex items-center justify-center text-4xl"
-              id="room2"
-            >
-              Room 2
-            </div>
+            <TracksPage />
 
             <img
               className="pillar2 hidden lg:block"
