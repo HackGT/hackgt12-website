@@ -125,9 +125,13 @@
 	padding: 0.5em;
 	position: relative;
 	z-index: 100;
-	/* so that theyre all vertically centered with each other. x-pos set dynamically */
-	/* top: 50%;
-	transform: translateY(-50%); */
+	cursor: pointer;
+}
+.tl-object-wrapper:hover .tl-object-label {
+	color: #ffdd9f;
+}
+.tl-object-wrapper:hover .tl-object-number {
+	background-color: #ffdd9f;
 }
 .tl-object-number {
 	display: flex;
