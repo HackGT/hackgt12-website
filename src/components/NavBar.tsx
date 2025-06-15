@@ -4,13 +4,33 @@ import { twMerge } from "tailwind-merge";
 export const NavBar = () => {
   return (
     <nav className="z-100 fixed w-full top-0">
-      <div className="hidden lg:block relative w-full">
+      <a
+        id="mlh-trust-badge"
+        style={{
+          display: "block",
+          position: "fixed",
+          top: 0,
+          zIndex: 10000,
+        }}
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-18 left-[30px] lg:right-[30px]"
+      >
+        <img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
+          alt="Major League Hacking 2026 Hackathon Season"
+          style={{ width: "100%" }}
+        />
+      </a>
+
+      <div className="hidden lg:block relative max-w-7xl mx-auto">
         <SpotlightImage className="left-70" type="right" />
         <SpotlightImage className="left-170" type="right" />
         <SpotlightImage className="right-60" type="left" />
       </div>
 
-      <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-16 items-center">
+      <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-12 items-center">
         <NavLink title="Home" href="#" />
         <NavLink title="About" href="#aboutSection" />
         <NavLink title="Tracks" href="#tracksSection" />
@@ -51,13 +71,11 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
     <div
       className={twMerge(
         "max-w-7xl mx-auto flex-col justify-between items-center px-4 py-2 transition-all",
-        isOpen ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
+        isOpen || !isAtTop ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
         className
       )}
     >
-      <div className="flex items-center w-full justify-between">
-        <div className="text-theme-gold text-3xl font-bold">HackGT 12 Logo</div>
-
+      <div className="flex items-center w-full justify-end">
         <button
           className="relative hover:cursor-pointer w-10 h-10 flex flex-col justify-center items-center focus:outline-none" // Add relative positioning and flex for bars
           onClick={() => setIsOpen(!isOpen)}
@@ -88,8 +106,8 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
       </div>
 
       {/* Navigation Links - conditionally rendered based on isOpen */}
-      {
-        isOpen &&<div
+      {isOpen && (
+        <div
           className={twMerge(
             "top-full left-0 w-full z-40 transition-opacity ease-in-out",
             isOpen ? "opacity-100 h-fit" : "opacity-0 h-0"
@@ -104,7 +122,7 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
             <NavLink title="Sponsors" href="#sponsorsSection" />
           </div>
         </div>
-      }
+      )}
     </div>
   );
 };
@@ -113,7 +131,7 @@ const NavLink = ({ title, href }: { title: string; href: string }) => {
   return (
     <a
       href={href}
-      className="font-cormo w-full text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-110 transition"
+      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[40px] text-theme-gold hover:brightness-110 transition"
     >
       {title}
     </a>
