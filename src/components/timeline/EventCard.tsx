@@ -9,6 +9,7 @@ const EventCard = ({day, idx}: {day: number, idx: number}) => {
 		<div className='eventcard'>
 			<div className='eventcard-title'>
 				{eventObj.name}
+				<img className='eventcard-icon' src={eventObj.icon_path} />
 			</div>
 			<div className='eventcard-desc font-poppins'>
 				{eventObj.desc}

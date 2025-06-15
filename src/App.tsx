@@ -8,6 +8,7 @@ import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
 import { TracksPage } from "./components/tracks/TracksPage";
 import TimelinePage from "./components/timeline/TimelinePage";
+import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -97,7 +98,8 @@ function App() {
               src="/about_pillar.png"
             ></img>
 
-            <TimelinePage />
+            {isLargeScreen? <TimelinePage /> : <TimelinePageThin />}
+            
           </div>
 
           <img

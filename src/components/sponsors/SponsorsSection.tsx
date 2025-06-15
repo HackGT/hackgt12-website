@@ -1,7 +1,7 @@
 export const SponsorsSection = () => {
   return (
     <div>
-      <h1 className="font-cormo text-[96px] text-[#F1C57C] text-center">
+      <h1 className="font-cormo text-[96px] color-gold text-center">
         Sponsors
       </h1>
 

@@ -88,21 +88,23 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
       </div>
 
       {/* Navigation Links - conditionally rendered based on isOpen */}
-      <div
-        className={twMerge(
-          "top-full left-0 w-full z-40 transition-opacity ease-in-out",
-          isOpen ? "opacity-100 h-fit" : "opacity-0 h-0"
-        )}
-      >
-        <div className="flex flex-col items-center gap-6">
-          <NavLink title="Home" href="#" />
-          <NavLink title="About" href="#aboutSection" />
-          <NavLink title="Tracks" href="#tracksSection" />
-          <NavLink title="Schedule" href="#scheduleSection" />
-          <NavLink title="FAQ" href="#faqsSection" />
-          <NavLink title="Sponsors" href="#sponsorsSection" />
+      {
+        isOpen &&<div
+          className={twMerge(
+            "top-full left-0 w-full z-40 transition-opacity ease-in-out",
+            isOpen ? "opacity-100 h-fit" : "opacity-0 h-0"
+          )}
+        >
+          <div className="flex flex-col items-center gap-6">
+            <NavLink title="Home" href="#" />
+            <NavLink title="About" href="#aboutSection" />
+            <NavLink title="Tracks" href="#tracksSection" />
+            <NavLink title="Schedule" href="#scheduleSection" />
+            <NavLink title="FAQ" href="#faqsSection" />
+            <NavLink title="Sponsors" href="#sponsorsSection" />
+          </div>
         </div>
-      </div>
+      }
     </div>
   );
 };
