@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <div>
-      <p className="text-[30px] text-white font-poppins text-center">
+      <p className="text-[20px] lg:text-[30px] text-white font-poppins text-center">
         With &lt;3 from the HexLabs team <br />
         <a
           className="underline"

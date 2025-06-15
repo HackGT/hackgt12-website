@@ -6,8 +6,11 @@ export const AboutPage = () => {
     >
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center z-10">
-          <div>
-            <h1 className="font-cormo text-[60px] text-white font-bold mb-8">
+          <div className="order-1 block lg:hidden">
+            <h1 className="font-cormo text-[48px] text-[#F1C57C]">About</h1>
+          </div>
+          <div className="order-3">
+            <h1 className="font-cormo text-[25px] lg:text-[60px] text-white font-bold mb-8">
               What is HackGT?
             </h1>
             <p className="text-[20px] text-white font-poppins">
@@ -29,7 +32,7 @@ export const AboutPage = () => {
             </p>
           </div>
 
-          <div className="justify-self-center">
+          <div className="order-2 lg:order-last justify-self-center">
             <img src="/about_pics.png" alt="about us!" />
           </div>
         </div>

@@ -8,7 +8,7 @@ import {
 export const FAQSection = () => {
   return (
     <div className="w-full mx-auto text-white">
-      <h1 className="mt-32  font-cormo color-gold text-[96px] text-center">
+      <h1 className="mt-32 mb-16 font-cormo color-gold text-[48px] lg:text-[96px] text-center">
         FAQs
       </h1>
 
@@ -19,10 +19,10 @@ export const FAQSection = () => {
             value={faq.q}
             className="rounded-xl w-full bg-[#2F2090] text-white border-none"
           >
-            <AccordionTrigger className="hover:cursor-pointer bg-[#3F458C] hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
+            <AccordionTrigger className="hover:cursor-pointer bg-[#3F458C] hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[16px] lg:text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
               {faq.q}
             </AccordionTrigger>
-            <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[16px] font-poppins border-none">
+            <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[12px] lg:text-[16px] font-poppins border-none">
               {faq.a}
             </AccordionContent>
           </AccordionItem>
