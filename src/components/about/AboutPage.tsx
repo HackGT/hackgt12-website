@@ -1,4 +1,3 @@
-import { CeilingShownOnSmall } from "../CeilingShownOnSmall";
 import { FloorShownOnSmall } from "../FloorShownOnSmall";
 
 export const AboutPage = () => {

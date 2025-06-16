@@ -5,7 +5,6 @@ import EventCard from "../EventCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import EVENTS from "../events.json";
 import ThinTimelineObject from "./ThinTimelineObject";
-import { CeilingShownOnSmall } from "@/components/CeilingShownOnSmall";
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div
@@ -45,7 +44,6 @@ const TimelinePageThin = () => {
 
   return (
     <PageContainer>
-      <CeilingShownOnSmall />
       <div className="tl-page-thin-container">
         <h1 className="font-cormo font-bold text-5xl color-gold w-full text-left">
           Schedule
