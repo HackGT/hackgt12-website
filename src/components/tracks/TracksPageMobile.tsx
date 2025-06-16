@@ -16,7 +16,7 @@ export const TracksPageMobile = () => {
           Tracks
         </h1>
         
-        <div className="grid grid-cols-2 gap-y-[5vh] pl-9 my-[20vh] relative z-10">
+        <div className="grid grid-cols-2 gap-y-[5vh] pl-9 my-[22vh] relative z-10">
           {/* Crypt of Data – Left */}
           <div className="flex justify-end mr-[2vw]">
             <Dialog>
@@ -128,6 +128,11 @@ export const TracksPageMobile = () => {
         </div>
 
         <FloorShownOnSmall />
+        <img
+          src="/camera.png"
+          alt="security camera"
+          className="right-0 absolute top-22 w-[60px] h-auto"
+        />
       </div>
     </div>
   );

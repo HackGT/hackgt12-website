@@ -13,7 +13,7 @@ export const AboutPage = () => {
                 About
               </h1>
             </div>
-            <div className="order-3">
+            <div className="order-3 mb-35 lg:mb-0">
               <h1 className="font-poppins text-[24px] text-white font-bold mb-4 mt-8 lg:hidden">
                 What is HackGT?
               </h1>
@@ -50,12 +50,12 @@ export const AboutPage = () => {
         <img
           src="/about_plant.png"
           alt="plant"
-          className="absolute bottom-[3vh] left-16 w-[100px] hidden lg:block"
+          className="absolute bottom-[3vh] left-16 w-[100px] "
         />
         <img
           src="/about_bear.png"
           alt="bear"
-          className="absolute bottom-[3vh] z-40 right-1/3 w-[120px] hidden lg:block"
+          className="absolute bottom-[3.6vh] z-40 right-1/3 w-[120px]"
         />
         <FloorShownOnSmall />
       </div>
