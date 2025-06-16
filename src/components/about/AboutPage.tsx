@@ -4,13 +4,13 @@ export const AboutPage = () => {
       id="aboutSection"
       className="relative py-24 lg:py-8 px-16 w-screen flex items-center justify-items-center snap-start bg-gradient-to-b from-[#020F27] to-[#0D3582] overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center z-10">
-          <div>
-            <h1 className="font-cormo text-[60px] text-white font-bold mb-8">
+      <div className="max-w-[85vw] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-4 items-center z-10">
+          <div className="self-start mt-8">
+            <h1 className="font-cormo text-4xl lg:text-[8vh] text-white font-bold mb-6 leading-tight">
               What is HackGT?
             </h1>
-            <p className="text-[20px] text-white font-poppins">
+            <p className="text-base lg:text-[2.4vh] text-white font-poppins">
               Shape the future at the 🎪 Circus of Inventions from{" "}
               <span className="underline">Friday, September 26th</span> to{" "}
               <span className="underline">Sunday, September 28th</span>! 🎡 The
@@ -18,7 +18,7 @@ export const AboutPage = () => {
               carnival of creativity for all innovators, builders, and
               visionaries.
             </p>
-            <p className="text-[20px] mt-8 text-white font-poppins">
+            <p className="text-base lg:text-[2.4vh] mt-5 text-white font-poppins">
               Each year, HackGT welcomes over 1500+ hackers 🤹 from around the
               world to tackle novel challenges, win exciting prizes, and make
               lasting connections 🎠! HackGT's stage will be open to everyone,
@@ -30,7 +30,7 @@ export const AboutPage = () => {
           </div>
 
           <div className="justify-self-center">
-            <img src="/about_pics.png" alt="about us!" />
+            <img src="/about_pics.svg" alt="about us!" className="w-auto max-h-[70vh] mt-10 lg:mt-0" />
           </div>
         </div>
       </div>
@@ -45,12 +45,12 @@ export const AboutPage = () => {
         <img
           src="/about_plant.png"
           alt="plant"
-          className="absolute bottom-10 left-16 w-[100px] hidden lg:block"
+          className="absolute bottom-[3vh] left-16 w-[100px] hidden lg:block"
         />
         <img
           src="/about_bear.png"
           alt="bear"
-          className="absolute bottom-10 right-1/3 w-[120px] hidden lg:block"
+          className="absolute bottom-[3vh] z-40 right-1/3 w-[120px] hidden lg:block"
         />
       </div>
     </div>

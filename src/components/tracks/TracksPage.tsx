@@ -21,7 +21,7 @@ export const TracksPage = () => {
               <img
                 src="/tracks/hall_of_illusions.svg"
                 alt="Hall of Illusions"
-                className="absolute top-[10%] right-[69%] w-[32vh] max-w-[288px] min-w-[120px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-2"
+                className="absolute top-[10%] lg:right-[73%] xl:right-[69%] w-[32vh] max-w-[288px] min-w-[120px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-2"
               />
             </DialogTrigger>
             <DialogContent>
@@ -59,7 +59,7 @@ export const TracksPage = () => {
               <img
                 src="/tracks/emerging.svg"
                 alt="Emerging"
-                className="absolute top-[15%] left-[69%] w-[32vh] max-w-[281px] min-w-[120px] -translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
+                className="absolute top-[15%] lg:left-[73%] xl:left-[69%] w-[32vh] max-w-[281px] min-w-[120px] -translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
               />
             </DialogTrigger>
             <DialogContent>
@@ -78,7 +78,7 @@ export const TracksPage = () => {
               <img
                 src="/tracks/curators_cause.svg"
                 alt="The Curator’s Cause"
-                className="absolute top-[38%] right-[61%] w-[35vh] max-w-[326px] min-w-[150px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
+                className="absolute top-[38%] lg:right-[64%] xl:right-[61%] w-[35vh] max-w-[326px] min-w-[150px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
               />
             </DialogTrigger>
             <DialogContent>
@@ -97,7 +97,7 @@ export const TracksPage = () => {
               <img
                 src="/tracks/crypt_of_data.svg"
                 alt="Crypt of Data"
-                className="absolute top-[47%] right-[38%] w-[33vh] max-w-[306px] min-w-[140px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-2"
+                className="absolute top-[47%] lg:right-[35%] xl:right-[38%] w-[33vh] max-w-[306px] min-w-[140px] translate-x-1/2 cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-2"
               />
             </DialogTrigger>
             <DialogContent>

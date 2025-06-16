@@ -127,7 +127,7 @@
 }
 
 body {
-  --about-floor-height: min(10vh, 50px);
+  --about-floor-height: 4vh;
 }
 
 .pillar1 {
@@ -148,6 +148,7 @@ body {
 .horiz-scroll-floor {
   position: absolute;
   bottom: 0;
-  height: var(--about-floor-height);
+  height: 4vh;
   width: 100vw;
+  z-index: 10;
 }

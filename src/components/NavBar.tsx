@@ -91,7 +91,7 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
       <div
         className={twMerge(
           "top-full left-0 w-full z-40 transition-opacity ease-in-out",
-          isOpen ? "opacity-100 h-fit" : "opacity-0 h-0"
+          isOpen ? "opacity-100 h-fit pointer-events-auto" : "opacity-0 h-0 pointer-events-none"
         )}
       >
         <div className="flex flex-col items-center gap-6">
