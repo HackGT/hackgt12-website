@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const NavBar = () => {
@@ -45,33 +45,12 @@ export const NavBar = () => {
 };
 const MobileNavMenu = ({ className = "" }: { className?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isAtTop, setIsAtTop] = useState(true);
-
-  // Handle scroll to change isAtTop state
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsAtTop(false);
-    } else {
-      setIsAtTop(true);
-    }
-  };
-
-  useEffect(() => {
-    // Set initial state based on current scroll position
-    handleScroll();
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup function to remove the event listener
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div
       className={twMerge(
         "max-w-7xl mx-auto flex-col justify-between items-center px-4 py-2 transition-all",
-        isOpen || !isAtTop ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
+        isOpen ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
         className
       )}
     >
@@ -131,7 +110,7 @@ const NavLink = ({ title, href }: { title: string; href: string }) => {
   return (
     <a
       href={href}
-      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[40px] text-theme-gold hover:brightness-110 transition"
+      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-110 transition"
     >
       {title}
     </a>

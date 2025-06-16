@@ -11,7 +11,7 @@ export const TracksPageMobile = () => {
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
-        <div className="grid grid-cols-2 gap-y-[5vh] px-6 my-[20vh] relative z-10">
+        <div className="grid grid-cols-2 gap-y-[5vh] pl-9 my-[20vh] relative z-10">
           {/* Crypt of Data – Left */}
           <div className="flex justify-end mr-[2vw]">
             <Dialog>

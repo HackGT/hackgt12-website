@@ -8,7 +8,7 @@ import {
 export const FAQSection = () => {
   return (
     <div className="w-full mx-auto text-white">
-      <h1 className="mt-32 mb-16 font-cormo color-gold text-[48px] lg:text-[96px] text-center">
+      <h1 className="mt-32 mb-8 font-cormo color-gold font-bold text-[48px] lg:text-[10vh] text-center">
         FAQs
       </h1>
 
