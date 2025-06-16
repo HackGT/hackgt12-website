@@ -6,6 +6,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { FloorShownOnSmall } from "../FloorShownOnSmall";
 
 export const TracksPageMobile = () => {
   return (
@@ -118,10 +119,11 @@ export const TracksPageMobile = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="absolute bottom-[14vh] w-full font-poppins text-center text-white opacity-60 text-sm md:text-base tracking-wide">
           Tap the frames to learn more about each track!
         </div>
+
+        <FloorShownOnSmall />
       </div>
     </div>
   );
