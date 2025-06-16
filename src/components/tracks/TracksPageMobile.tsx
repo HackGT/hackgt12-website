@@ -12,6 +12,10 @@ export const TracksPageMobile = () => {
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
+        <h1 className="mx-[7.5vw] mt-[10vh] absolute font-cormo font-bold text-[48px] text-[#F1C57C]">
+          Tracks
+        </h1>
+        
         <div className="grid grid-cols-2 gap-y-[5vh] pl-9 my-[20vh] relative z-10">
           {/* Crypt of Data – Left */}
           <div className="flex justify-end mr-[2vw]">
@@ -119,7 +123,7 @@ export const TracksPageMobile = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-[14vh] w-full font-poppins text-center text-white opacity-60 text-sm md:text-base tracking-wide">
+        <div className="absolute bottom-[12vh] w-full font-poppins text-center text-white opacity-60 text-sm md:text-base tracking-wide">
           Tap the frames to learn more about each track!
         </div>
 

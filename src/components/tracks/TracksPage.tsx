@@ -6,13 +6,11 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { FloorShownOnSmall } from "../FloorShownOnSmall";
 
 export const TracksPage = () => {
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
-        <FloorShownOnSmall />
 
         <div className="absolute inset-0 translate-y-[10vh]">
           {/* Hall of Illusions */}

@@ -8,9 +8,10 @@ export const AboutPage = () => {
     >
       <div className="max-w-[85vw] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-4 items-center z-10">
-          {/* <div className="self-start mt-8"> */}
             <div className="order-1 lg:hidden mb-4">
-              <h1 className="font-cormo font-bold text-[48px] text-[#F1C57C]">About</h1>
+              <h1 className="font-cormo font-bold text-[48px] text-[#F1C57C]">
+                About
+              </h1>
             </div>
             <div className="order-3">
               <h1 className="font-poppins text-[24px] text-white font-bold mb-4 mt-8 lg:hidden">
@@ -37,7 +38,6 @@ export const AboutPage = () => {
               mini-events, and lots of swag! 🏆
             </p>
             </div>
-          {/* </div> */}
 
           <div className="order-2 lg:order-last justify-self-center">
             <img src="/about_pics.svg" alt="about us!" className="w-auto max-h-[70vh] mt-2 lg:mt-0" />
