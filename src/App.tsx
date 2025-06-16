@@ -8,6 +8,7 @@ import { SponsorsSection } from "./components/sponsors/SponsorsSection";
 import { Footer } from "./components/footer/Footer";
 import { TracksPage } from "./components/tracks/TracksPage";
 import TimelinePage from "./components/timeline/TimelinePage";
+import { TracksPageMobile } from "./components/tracks/TracksPageMobile";
 import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
 
 function App() {
@@ -91,7 +92,12 @@ function App() {
               src="/about_pillar.png"
             ></img>
 
-            <TracksPage />
+            <div className="hidden lg:block">
+              <TracksPage />
+            </div>
+            <div className="block lg:hidden">
+              <TracksPageMobile />
+            </div>
 
             <img
               className="pillar2 hidden lg:block"
@@ -110,7 +116,7 @@ function App() {
       </section>
 
       {/* Vertical scroll resumes */}
-      <section className=" bg-gradient-to-b from-[#170E5C] to-[#251B73] min-h-screen">
+      <section className=" bg-gradient-to-b from-[#070045] to-[#211B73] min-h-screen">
         <div className="p-8 flex flex-col gap-32">
           <FAQSection />
           <SponsorsSection />
