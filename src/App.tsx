@@ -85,7 +85,7 @@ function App() {
             }`}
           >
             <AboutPage />
-            
+
             <img
               className="pillar1 hidden lg:block z-50"
               src="/about_pillar.png"
@@ -98,8 +98,7 @@ function App() {
               src="/about_pillar.png"
             ></img>
 
-            {isLargeScreen? <TimelinePage /> : <TimelinePageThin />}
-            
+            {isLargeScreen ? <TimelinePage /> : <TimelinePageThin />}
           </div>
 
           <img

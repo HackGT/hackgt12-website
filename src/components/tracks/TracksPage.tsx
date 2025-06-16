@@ -6,14 +6,16 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { FloorShownOnSmall } from "../FloorShownOnSmall";
+import { CeilingShownOnSmall } from "../CeilingShownOnSmall";
 
 export const TracksPage = () => {
   return (
-    <div
-      className="snap-start w-screen h-screen"
-      id="room2"
-    >
+    <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
+        <CeilingShownOnSmall />
+        <FloorShownOnSmall />
+
         <div className="absolute inset-0 translate-y-[10vh]">
           {/* Hall of Illusions */}
           <Dialog>
@@ -26,9 +28,13 @@ export const TracksPage = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="font-cormo font-semibold text-[4vh]">Hall of Illusions</DialogTitle>
+                <DialogTitle className="font-cormo font-semibold text-[4vh]">
+                  Hall of Illusions
+                </DialogTitle>
                 <DialogDescription className="font-cormo text-[3vh] text-black">
-                  Step into a world of immersive tech, interactive media, and creative storytelling that blurs the line between reality and imagination.
+                  Step into a world of immersive tech, interactive media, and
+                  creative storytelling that blurs the line between reality and
+                  imagination.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
@@ -45,9 +51,12 @@ export const TracksPage = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="font-cormo font-semibold text-[4vh]">The Gadget Gallery</DialogTitle>
+                <DialogTitle className="font-cormo font-semibold text-[4vh]">
+                  The Gadget Gallery
+                </DialogTitle>
                 <DialogDescription className="font-cormo text-[3vh] text-black">
-                  Show off your hardware hacks, from robots to smart devices and everything in between.
+                  Show off your hardware hacks, from robots to smart devices and
+                  everything in between.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
@@ -64,9 +73,13 @@ export const TracksPage = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="font-cormo font-semibold text-[4vh]">Emerging</DialogTitle>
+                <DialogTitle className="font-cormo font-semibold text-[4vh]">
+                  Emerging
+                </DialogTitle>
                 <DialogDescription className="font-cormo text-[3vh] text-black">
-                  New to hackathons? This track is your launchpad—no experience needed,  just curiosity, creativity, and a willingness to build something awesome.
+                  New to hackathons? This track is your launchpad—no experience
+                  needed, just curiosity, creativity, and a willingness to build
+                  something awesome.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
@@ -83,9 +96,12 @@ export const TracksPage = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="font-cormo font-semibold text-[4vh]">The Curator's Cause</DialogTitle>
+                <DialogTitle className="font-cormo font-semibold text-[4vh]">
+                  The Curator's Cause
+                </DialogTitle>
                 <DialogDescription className="font-cormo text-[3vh] text-black">
-                  Build solutions that make a difference, whether it’s improving lives, communities, or the environment through tech.
+                  Build solutions that make a difference, whether it’s improving
+                  lives, communities, or the environment through tech.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
@@ -102,9 +118,12 @@ export const TracksPage = () => {
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle className="font-cormo font-semibold text-[4vh]">Crypt of Data</DialogTitle>
+                <DialogTitle className="font-cormo font-semibold text-[4vh]">
+                  Crypt of Data
+                </DialogTitle>
                 <DialogDescription className="font-cormo text-[3vh] text-black">
-                  Dig into the depths of data through visualization, analytics, fintech, Web3 innovation, or wherever the numbers lead you.
+                  Dig into the depths of data through visualization, analytics,
+                  fintech, Web3 innovation, or wherever the numbers lead you.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
