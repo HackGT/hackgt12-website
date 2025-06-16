@@ -85,6 +85,7 @@ const TimelinePage = () => {
 						className='timeline-group top'>
 							{timelineHalves[0].map((ele, index) => (
 								<TimelineObject
+								onClick={() => updateIdx(2*index)}
 								key={`toptl-${index}`}
 								name={ele.name}
 								time={ele.time}
@@ -101,6 +102,7 @@ const TimelinePage = () => {
 						className='timeline-group bottom'>
 							{timelineHalves[1].map((ele, index) => (
 								<TimelineObject
+								onClick={() => updateIdx(2*index+1)}
 								key={`bottomtl-${index}`}
 								name={ele.name}
 								time={ele.time}

@@ -9,6 +9,7 @@ export type TimelineObject_t = {
 }
 
 type ExtraProps = {
+	onClick?: () => void;
 	number: number;
 	is_on_top?: boolean;
 	style?: React.CSSProperties;
@@ -17,6 +18,7 @@ type ExtraProps = {
 const TimelineObject = (props: TimelineObject_t & ExtraProps) => {
 	return (
 		<div 
+		onClick={props.onClick}
 		id={`tl-object-${props.number}`}
 		className={`tl-object-wrapper ${props.is_on_top? 'is_top' : 'is_bottom'}`} 
 		style={props.style}>

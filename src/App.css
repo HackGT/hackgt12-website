@@ -48,6 +48,13 @@
   --color-theme-gold: #F1C57C;
 }
 
+.color-gold {
+  color: var(--color-theme-gold);
+}
+.bg-gold {
+  background-color: var(--color-theme-gold);
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

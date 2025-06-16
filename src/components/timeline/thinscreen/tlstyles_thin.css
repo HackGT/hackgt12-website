@@ -1,0 +1,86 @@
+.tl-page-thin-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 85%;
+	height: 100%;
+	margin: 10vh auto;
+	gap: 2rem;
+}
+.tl-page-thin-floor {
+	height: 50px;
+	object-fit: cover;
+}
+
+.thin-tl-object {
+	width: 100%;
+	border-radius: 1000px;
+	padding: 0.3rem 1.25rem;
+	gap: 1rem;
+	background-color: var(--color-theme-gold);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.tl-object-wrapper:hover .tl-object-label {
+	color: #ffdd9f;
+}
+.thin-tl-object:hover .tl-thin-object-number {
+	background-color: #6b8330;
+}
+
+.thin-tl-object-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.thin-tl-object-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1000px;
+	width: 2em;
+	height: 2em;
+	color: white;
+	font-size: 0.75rem;
+	background-color: #3F5E25;
+}
+
+.eventcard-rounded-button-small {
+	border-radius: 1000px;
+	background-color: white;
+	padding: 0.4em;
+	height: fit-content;
+	width: fit-content;
+	cursor: pointer;
+	transition: transform 0.1s ease-out;
+}
+
+.day-selector-thin {
+	display: flex;
+	border-radius: 1000px;
+	background-color: #B5C5C3;
+	padding: 5px;
+	gap: 5px;
+	justify-content: center;
+}
+.day-selector-thin-option {
+	border-radius: 1000px;
+	background-color: transparent;
+	cursor: pointer;
+	color: black;
+	flex-grow: 1;
+	padding: 0 0.8em;
+	transition: background-color 0.1s;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+.day-selector-thin-option:hover {
+	background-color: #00342720;
+}
+.day-selector-thin-option.selected {
+	background-color: #003427;
+	color: white;
+}

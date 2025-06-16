@@ -9,6 +9,7 @@ import { Footer } from "./components/footer/Footer";
 import { TracksPage } from "./components/tracks/TracksPage";
 import TimelinePage from "./components/timeline/TimelinePage";
 import { TracksPageMobile } from "./components/tracks/TracksPageMobile";
+import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,7 +86,7 @@ function App() {
             }`}
           >
             <AboutPage />
-            
+
             <img
               className="pillar1 hidden lg:block z-50"
               src="/about_pillar.png"
@@ -103,7 +104,7 @@ function App() {
               src="/about_pillar.png"
             ></img>
 
-            <TimelinePage />
+            {isLargeScreen ? <TimelinePage /> : <TimelinePageThin />}
           </div>
 
           <img

@@ -32,17 +32,27 @@
 	background-color: white;
 	border-radius: 16px;
 	overflow: hidden;
-	max-width: 500px;
+	max-width: min(100%, 500px);
+	margin: 0 auto;
 }
 .eventcard-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.3em;
 	font-size: 2.5rem;
 	font-weight: 700;
 	padding: 0.2em 1.2em;
 	background-color: #B5C5C3;
+	text-align: center;
 }
 .eventcard-desc {
 	padding: 1em 2em;
 	font-size: 1rem;
+	text-align: center;
+}
+.eventcard-icon {
+	height: 1em;
 }
 .eventcard-rounded-button {
 	border-radius: 1000px;
@@ -105,7 +115,7 @@
 .timeline-group {
 	position: relative;
 	display: flex;
-	gap: 4rem;
+	gap: min(4rem, 2.5vw);
 	justify-content: center;
 }
 .timeline-group.top {
@@ -125,9 +135,13 @@
 	padding: 0.5em;
 	position: relative;
 	z-index: 100;
-	/* so that theyre all vertically centered with each other. x-pos set dynamically */
-	/* top: 50%;
-	transform: translateY(-50%); */
+	cursor: pointer;
+}
+.tl-object-wrapper:hover .tl-object-label {
+	color: #ffdd9f;
+}
+.tl-object-wrapper:hover .tl-object-number {
+	background-color: #ffdd9f;
 }
 .tl-object-number {
 	display: flex;
