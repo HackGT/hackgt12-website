@@ -16,7 +16,7 @@ export const TracksPageMobile = () => {
           Tracks
         </h1>
         
-        <div className="grid grid-cols-2 gap-y-[5vh] pl-9 my-[22vh] relative z-10">
+        <div className="grid grid-cols-2 gap-y-[5vh] pl-4 my-[22vh] relative z-10">
           {/* Crypt of Data – Left */}
           <div className="flex justify-end mr-[2vw]">
             <Dialog>
@@ -29,8 +29,8 @@ export const TracksPageMobile = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[4vh]">Crypt of Data</DialogTitle>
-                  <DialogDescription className="font-cormo text-[3vh] text-black">
+                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Crypt of Data</DialogTitle>
+                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
                     Dig into the depths of data through visualization, analytics, fintech, Web3 innovation, or wherever the numbers lead you.
                   </DialogDescription>
                 </DialogHeader>
@@ -50,8 +50,8 @@ export const TracksPageMobile = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[4vh]">The Gadget Gallery</DialogTitle>
-                  <DialogDescription className="font-cormo text-[3vh] text-black">
+                  <DialogTitle className="font-cormo font-semibold text-[3vh]">The Gadget Gallery</DialogTitle>
+                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
                     Show off your hardware hacks, from robots to smart devices and everything in between.
                   </DialogDescription>
                 </DialogHeader>
@@ -71,8 +71,8 @@ export const TracksPageMobile = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[4vh]">Hall of Illusions</DialogTitle>
-                  <DialogDescription className="font-cormo text-[3vh] text-black">
+                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Hall of Illusions</DialogTitle>
+                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
                     Step into a world of immersive tech, interactive media, and creative storytelling that blurs the line between reality and imagination.
                   </DialogDescription>
                 </DialogHeader>
@@ -92,8 +92,8 @@ export const TracksPageMobile = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[4vh]">The Curator's Cause</DialogTitle>
-                  <DialogDescription className="font-cormo text-[3vh] text-black">
+                  <DialogTitle className="font-cormo font-semibold text-[3vh]">The Curator's Cause</DialogTitle>
+                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
                     Build solutions that make a difference, whether it’s improving lives, communities, or the environment through tech.
                   </DialogDescription>
                 </DialogHeader>
@@ -113,8 +113,8 @@ export const TracksPageMobile = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[4vh]">Emerging</DialogTitle>
-                  <DialogDescription className="font-cormo text-[3vh] text-black">
+                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Emerging</DialogTitle>
+                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
                     New to hackathons? This track is your launchpad—no experience needed, just curiosity, creativity, and a willingness to build something awesome.
                   </DialogDescription>
                 </DialogHeader>
