@@ -25,9 +25,9 @@ export const NavBar = () => {
       </a>
 
       <div className="hidden lg:block relative max-w-7xl mx-auto">
-        <SpotlightImage className="left-70" type="right" />
-        <SpotlightImage className="left-170" type="right" />
-        <SpotlightImage className="right-60" type="left" />
+        <SpotlightImage className="left-[22%]" type="right" />
+        <SpotlightImage className="left-[50%]" type="right" />
+        <SpotlightImage className="right-[22%]" type="left" />
       </div>
 
       <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-12 items-center">

@@ -22,7 +22,7 @@ export const FAQSection = () => {
             <AccordionTrigger className="hover:cursor-pointer bg-[#3F458C] hover:bg-[#353a75] px-6 py-4 text-left font-semibold text-white text-[16px] lg:text-[18px] font-poppins rounded-xl border-none outline-none focus:ring-0">
               {faq.q}
             </AccordionTrigger>
-            <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[12px] lg:text-[16px] font-poppins border-none">
+            <AccordionContent className="bg-[#2F2090] text-white px-6 py-4 rounded-b-xl text-[14px] lg:text-[16px] font-poppins border-none">
               {faq.a}
             </AccordionContent>
           </AccordionItem>

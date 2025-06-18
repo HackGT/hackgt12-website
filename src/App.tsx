@@ -10,6 +10,7 @@ import { TracksPage } from "./components/tracks/TracksPage";
 import TimelinePage from "./components/timeline/TimelinePage";
 import { TracksPageMobile } from "./components/tracks/TracksPageMobile";
 import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
+import { HeroPageMobile } from "./components/hero/HeroPageMobile";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -69,7 +70,12 @@ function App() {
       <NavBar />
       {/* Vertical scroll before */}
 
-      <HeroPage />
+      <div className="hidden md:block">
+        <HeroPage />
+      </div>
+      <div className="block md:hidden">
+        <HeroPageMobile />
+      </div>
 
       {/* Horizontal scroll section */}
       <section

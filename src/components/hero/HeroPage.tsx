@@ -1,5 +1,3 @@
-import { FloorShownOnSmall } from "../FloorShownOnSmall";
-
 export const HeroPage = () => {
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
@@ -9,11 +7,11 @@ export const HeroPage = () => {
         alt="Background column"
       />
 
-      <div className="absolute bottom-0 w-full flex flex-col items-center translate-x-[-20%]">
-        <div className="relative w-auto max-h-[calc(100vh-145px)]">
+      <div className="absolute bottom-0 w-full flex flex-col items-center md:translate-x-[-16%] lg:translate-x-[-19%] xl:translate-x-[-20%]">
+        <div className="relative w-auto max-h-[calc(100vh-130px)] md:max-h-[calc(100vh-145px)]">
           <img
             src="/home_entrance.svg"
-            className="max-h-[calc(100vh-160px)] w-auto"
+            className="max-h-[calc(100vh-130px)] w-auto"
             alt="Entrance Arch"
           />
 
@@ -38,7 +36,7 @@ export const HeroPage = () => {
 
       <img
         src="/dino.svg"
-        className="absolute right-0 bottom-0 w-[55vw] max-w-[800px] max-h-[calc(100vh-130px)] z-10"
+        className="absolute right-0 bottom-0 md:w-[50vw] xl:w-[55vw] max-w-[800px] max-h-[calc(100vh-130px)] z-10"
         alt="Dino"
       />
     </section>
