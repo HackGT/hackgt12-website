@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const NavBar = () => {
+export const NavBar = ({
+  onNavigate,
+}: {
+  onNavigate: (sectionId: string) => void;
+}) => {
   return (
     <nav className="z-100 fixed w-full top-0">
       <a
@@ -31,19 +35,33 @@ export const NavBar = () => {
       </div>
 
       <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-12 items-center">
-        <NavLink title="Home" href="#" />
-        <NavLink title="About" href="#about" />
-        <NavLink title="Tracks" href="#tracks" />
-        <NavLink title="Schedule" href="#schedule" />
-        <NavLink title="FAQ" href="#faqs" />
-        <NavLink title="Sponsors" href="#sponsors" />
+        <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
+        <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
+        <NavLink title="Tracks" sectionId="tracks" onNavigate={onNavigate} />
+        <NavLink
+          title="Schedule"
+          sectionId="schedule"
+          onNavigate={onNavigate}
+        />
+        <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
+        <NavLink
+          title="Sponsors"
+          sectionId="sponsors"
+          onNavigate={onNavigate}
+        />
       </div>
 
-      <MobileNavMenu className="flex lg:hidden" />
+      <MobileNavMenu className="flex lg:hidden" onNavigate={onNavigate} />
     </nav>
   );
 };
-const MobileNavMenu = ({ className = "" }: { className?: string }) => {
+const MobileNavMenu = ({
+  className = "",
+  onNavigate,
+}: {
+  className?: string;
+  onNavigate: (sectionId: string) => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -93,12 +111,24 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
           )}
         >
           <div className="flex flex-col items-center gap-6">
-            <NavLink title="Home" href="#" />
-            <NavLink title="About" href="#about" />
-            <NavLink title="Tracks" href="#tracks" />
-            <NavLink title="Schedule" href="#schedule" />
-            <NavLink title="FAQ" href="#faqs" />
-            <NavLink title="Sponsors" href="#sponsors" />
+            <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
+            <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
+            <NavLink
+              title="Tracks"
+              sectionId="tracks"
+              onNavigate={onNavigate}
+            />
+            <NavLink
+              title="Schedule"
+              sectionId="schedule"
+              onNavigate={onNavigate}
+            />
+            <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
+            <NavLink
+              title="Sponsors"
+              sectionId="sponsors"
+              onNavigate={onNavigate}
+            />
           </div>
         </div>
       )}
@@ -106,14 +136,22 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
   );
 };
 
-const NavLink = ({ title, href }: { title: string; href: string }) => {
+const NavLink = ({
+  title,
+  sectionId,
+  onNavigate,
+}: {
+  title: string;
+  sectionId: string;
+  onNavigate: (sectionId: string) => void;
+}) => {
   return (
-    <a
-      href={href}
-      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-110 transition"
+    <button
+      onClick={() => onNavigate(sectionId)}
+      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-150 transition hover:cursor-pointer "
     >
       {title}
-    </a>
+    </button>
   );
 };
 
