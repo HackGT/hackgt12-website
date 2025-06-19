@@ -18,21 +18,21 @@ export const AboutPage = () => {
               About HackGT
             </h1>
             <p className="text-base lg:text-[2.4vh] text-white font-poppins">
-              Shape the future at the 🎪 Circus of Inventions from{" "}
+              HackGT, HexLabs' annual 36-hour hackathon, is returning to Georgia
+              Tech — and this time, it's after hours. From{" "}
               <span className="underline">Friday, September 26th</span> to{" "}
-              <span className="underline">Sunday, September 28th</span>! 🎡 The
-              11th edition of our flagship hackathon brings you a transformed
-              carnival of creativity for all innovators, builders, and
-              visionaries.
+              <span className="underline">Sunday, September 28th</span>, we’re
+              turning the Klaus Advanced Computing Building into a place where
+              creativity, curiosity, and code come alive.
             </p>
             <p className="text-base lg:text-[2.4vh] mt-5 text-white font-poppins">
-              Each year, HackGT welcomes over 1500+ hackers 🤹 from around the
+              Each year, HackGT welcomes over 1500+ hackers from around the
               world to tackle novel challenges, win exciting prizes, and make
-              lasting connections 🎠! HackGT's stage will be open to everyone,
+              lasting connections! HackGT's halls will be open to everyone,
               regardless of background, experience, or skill level, to showcase
-              their innovative ideas. 🎢 Hackers can expect a thrilling weekend
+              their innovative ideas. Hackers can expect a thrilling weekend
               filled with networking opportunities, top-tier prizes, engaging
-              mini-events, and lots of swag! 🏆
+              mini-events, and lots of swag!
             </p>
           </div>
 
