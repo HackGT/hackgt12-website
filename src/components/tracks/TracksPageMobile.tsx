@@ -12,7 +12,7 @@ export const TracksPageMobile = () => {
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
-        <h1 className="mx-[7.5vw] mt-[10vh] absolute font-cormo font-bold text-[48px] text-[#F1C57C]">
+        <h1 className="mt-[10vh] mb-4 font-cormo font-bold text-5xl text-theme-gold absolute left-1/2 -translate-x-1/2">
           Tracks
         </h1>
         

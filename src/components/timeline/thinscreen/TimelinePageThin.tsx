@@ -45,7 +45,7 @@ const TimelinePageThin = () => {
   return (
     <PageContainer>
       <div className="tl-page-thin-container">
-        <h1 className="font-cormo font-bold text-5xl color-gold w-full text-left">
+        <h1 className="font-cormo font-bold text-5xl color-gold w-full text-center my-4">
           Schedule
         </h1>
         <div className="day-selector-thin">

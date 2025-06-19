@@ -6,6 +6,11 @@ export const HeroPage = () => {
         className="absolute top-0 left-[60%] h-full object-cover z-0"
         alt="Background column"
       />
+      <img
+        src="/bg-column.svg"
+        className="absolute top-0 right-0 h-full object-cover z-0 translate-x-[50%]"
+        alt="Background column"
+      />
 
       <div className="absolute bottom-0 w-full flex flex-col items-center md:translate-x-[-16%] lg:translate-x-[-19%] xl:translate-x-[-20%]">
         <div className="relative w-auto max-h-[calc(100vh-130px)] md:max-h-[calc(100vh-145px)]">
@@ -23,8 +28,11 @@ export const HeroPage = () => {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
             <img src="/title.svg" alt="HackGT 12" className="w-[86%] h-auto" />
             <div className="mb-[6%] w-full max-w-full px-4">
-              <h2 className="font-poppins text-theme-gold text-[3.5vh] mb-[1.2em]">
+              <h2 className="font-poppins text-theme-gold text-[3.5vh]">
                 midnight at the museum
+              </h2>
+              <h2 className="font-poppins text-theme-gold text-[3.5vh] mb-[1.2em]">
+                09/26 - 09/28
               </h2>
               <button className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-7 py-1 text-[4vh] cursor-pointer hover:brightness-110 transition">
                 Register

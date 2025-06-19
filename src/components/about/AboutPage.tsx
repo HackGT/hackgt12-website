@@ -2,14 +2,14 @@ import { FloorShownOnSmall } from "../FloorShownOnSmall";
 
 export const AboutPage = () => {
   return (
-    <div
-      id="aboutSection"
+    <section
+      id="about"
       className="relative py-24 lg:py-8 px-16 w-screen flex items-center justify-items-center snap-start bg-gradient-to-b from-[#020F27] to-[#0D3582] overflow-hidden"
     >
       <div className="max-w-[85vw] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-4 items-center z-10">
             <div className="order-1 lg:hidden mb-4">
-              <h1 className="font-cormo font-bold text-[48px] text-[#F1C57C]">
+              <h1 className="font-cormo font-bold text-5xl text-theme-gold text-center mb-2">
                 About
               </h1>
             </div>
@@ -59,6 +59,6 @@ export const AboutPage = () => {
         />
         <FloorShownOnSmall />
       </div>
-    </div>
+    </section>
   );
 };

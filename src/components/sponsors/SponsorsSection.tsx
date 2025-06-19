@@ -1,6 +1,6 @@
 export const SponsorsSection = () => {
   return (
-    <div>
+    <div id="sponsors" className="pt-[20vh]">
       <h1 className="font-cormo font-bold text-[48px] lg:text-[10vh] color-gold text-center">
         Sponsors
       </h1>

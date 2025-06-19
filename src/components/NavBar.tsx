@@ -32,11 +32,11 @@ export const NavBar = () => {
 
       <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-12 items-center">
         <NavLink title="Home" href="#" />
-        <NavLink title="About" href="#aboutSection" />
-        <NavLink title="Tracks" href="#tracksSection" />
-        <NavLink title="Schedule" href="#scheduleSection" />
-        <NavLink title="FAQ" href="#faqsSection" />
-        <NavLink title="Sponsors" href="#sponsorsSection" />
+        <NavLink title="About" href="#about" />
+        <NavLink title="Tracks" href="#tracks" />
+        <NavLink title="Schedule" href="#schedule" />
+        <NavLink title="FAQ" href="#faqs" />
+        <NavLink title="Sponsors" href="#sponsors" />
       </div>
 
       <MobileNavMenu className="flex lg:hidden" />
@@ -94,11 +94,11 @@ const MobileNavMenu = ({ className = "" }: { className?: string }) => {
         >
           <div className="flex flex-col items-center gap-6">
             <NavLink title="Home" href="#" />
-            <NavLink title="About" href="#aboutSection" />
-            <NavLink title="Tracks" href="#tracksSection" />
-            <NavLink title="Schedule" href="#scheduleSection" />
-            <NavLink title="FAQ" href="#faqsSection" />
-            <NavLink title="Sponsors" href="#sponsorsSection" />
+            <NavLink title="About" href="#about" />
+            <NavLink title="Tracks" href="#tracks" />
+            <NavLink title="Schedule" href="#schedule" />
+            <NavLink title="FAQ" href="#faqs" />
+            <NavLink title="Sponsors" href="#sponsors" />
           </div>
         </div>
       )}

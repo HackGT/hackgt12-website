@@ -98,12 +98,14 @@ function App() {
               src="/about_pillar.png"
             ></img>
 
+          <div id="tracks">
             <div className="hidden lg:block">
               <TracksPage />
             </div>
             <div className="block lg:hidden">
               <TracksPageMobile />
             </div>
+          </div>
 
             <img
               className="pillar2 hidden lg:block"
