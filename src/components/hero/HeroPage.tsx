@@ -1,4 +1,10 @@
 export const HeroPage = () => {
+  const INTEREST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdOEgnIwjZbRALua5mK8_RbOdu9d6eWzkUrEYyMmTqQLpvb9g/viewform?usp=preview";
+  
+  const handleClick = () => {
+    window.open(INTEREST_URL, "_blank");
+  }
+
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
       <img
@@ -34,8 +40,8 @@ export const HeroPage = () => {
               <h2 className="font-poppins text-theme-gold text-[3.5vh] mb-[1.2em]">
                 09/26 - 09/28
               </h2>
-              <button className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-7 py-1 text-[4vh] cursor-pointer hover:brightness-110 transition">
-                Register
+              <button onClick={handleClick} className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-7 py-1 text-[4vh] cursor-pointer hover:brightness-110 transition">
+                Interest Form
               </button>
             </div>
           </div>

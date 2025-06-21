@@ -1,4 +1,10 @@
 export const HeroPageMobile = () => {
+  const INTEREST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdOEgnIwjZbRALua5mK8_RbOdu9d6eWzkUrEYyMmTqQLpvb9g/viewform?usp=preview";
+  
+  const handleClick = () => {
+    window.open(INTEREST_URL, "_blank");
+  }
+
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
       <img
@@ -22,8 +28,8 @@ export const HeroPageMobile = () => {
           <h2 className="font-poppins text-theme-gold text-2xl mb-4">
             09/26 - 09/28
           </h2>
-          <button className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-5 py-1 text-4xl cursor-pointer hover:brightness-110 transition">
-            Register
+          <button onClick={handleClick} className="bg-theme-gold font-cormo font-bold text-[#771500] rounded-3xl px-5 py-1 text-4xl cursor-pointer hover:brightness-110 transition">
+            Interest Form
           </button>
         </div>
       </div>
@@ -45,7 +51,7 @@ export const HeroPageMobile = () => {
 
       <img
         src="/dino.svg"
-        className="absolute right-0 bottom-0 z-10 max-h-[52vh]"
+        className="absolute right-0 bottom-0 z-10 max-h-[48vh]"
         alt="Dino"
       />
     </section>
