@@ -15,6 +15,7 @@ import { HeroPageMobile } from "./components/hero/HeroPageMobile";
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
   const [isLargeScreen, setIsLargeScreen] = useState(false); // State to track screen size
 
   useEffect(() => {
@@ -65,17 +66,59 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isLargeScreen]); // Re-run effect when isLargeScreen changes
 
+  const scrollToSection = (sectionId: string) => {
+    if (!isLargeScreen) {
+      // For mobile/tablet, use normal scroll behavior
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
+
+    // For large screens with horizontal scroll
+    const container = containerRef.current;
+    if (!container) return;
+
+    let targetPercent = 0;
+    switch (sectionId) {
+      case "about":
+        targetPercent = 0; // First section (0%)
+        break;
+      case "tracks":
+        targetPercent = 0.5; // Middle section (50%)
+        break;
+      case "schedule":
+        targetPercent = 1; // Last section (100%)
+        break;
+      default: {
+        // For FAQ and Sponsors, scroll to the vertical section
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+        return;
+      }
+    }
+
+    // Calculate the scroll position needed
+    const rect = container.getBoundingClientRect();
+    const startY = window.scrollY + rect.top;
+    const maxScroll = container.offsetHeight - window.innerHeight;
+    const targetScrollY = startY + targetPercent * maxScroll;
+
+    window.scrollTo({
+      top: targetScrollY,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
-      <NavBar />
+      <NavBar onNavigate={scrollToSection} />
       {/* Vertical scroll before */}
 
-      <div className="hidden md:block">
-        <HeroPage />
-      </div>
-      <div className="block md:hidden">
-        <HeroPageMobile />
-      </div>
+      <div id="home">{isLargeScreen ? <HeroPage /> : <HeroPageMobile />}</div>
 
       {/* Horizontal scroll section */}
       <section
@@ -91,28 +134,32 @@ function App() {
               isLargeScreen ? "flex w-[300vw]" : "block w-full"
             }`}
           >
-            <AboutPage />
+            <div id="about">
+              <AboutPage />
+            </div>
 
             <img
               className="pillar1 hidden lg:block z-50"
               src="/about_pillar.png"
             ></img>
 
-          <div id="tracks">
-            <div className="hidden lg:block">
-              <TracksPage />
+            <div id="tracks">
+              <div className="hidden lg:block">
+                <TracksPage />
+              </div>
+              <div className="block lg:hidden">
+                <TracksPageMobile />
+              </div>
             </div>
-            <div className="block lg:hidden">
-              <TracksPageMobile />
-            </div>
-          </div>
 
             <img
               className="pillar2 hidden lg:block"
               src="/about_pillar.png"
             ></img>
 
-            {isLargeScreen ? <TimelinePage /> : <TimelinePageThin />}
+            <div id="schedule">
+              {isLargeScreen ? <TimelinePage /> : <TimelinePageThin />}
+            </div>
           </div>
 
           <img

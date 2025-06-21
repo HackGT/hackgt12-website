@@ -42,7 +42,7 @@ const FAQ_CONTENT = [
     a: "Registration opens July 22nd! This year, we have 2 rounds of applications; take a look at the Registration section below for more about this! Keep an eye out on our socials and subscribe to our newsletter for more information, coming soon 👀",
   },
   {
-    q: "It’s my first hackathon. Should I apply?",
+    q: "It's my first hackathon. Should I apply?",
     a: "Yes! Experience is not required. Hackathons are open creative and learning environments for everyone. If you are new to hackathons, the Emerging Hacker track may be for you!",
   },
   {

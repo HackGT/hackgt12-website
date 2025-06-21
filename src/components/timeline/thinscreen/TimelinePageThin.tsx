@@ -5,6 +5,7 @@ import EventCard from "../EventCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import EVENTS from "../events.json";
 import ThinTimelineObject from "./ThinTimelineObject";
+import { isReady } from "../TimelinePage";
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div
@@ -41,6 +42,26 @@ const TimelinePageThin = () => {
       clearTimeout(t);
     };
   }, [selectedEventIdx]);
+
+  if (!isReady) {
+    if (!isReady) {
+      return (
+        <PageContainer>
+          <div className="flex flex-col items-center my-16">
+            <h1 className="font-cormo font-bold text-[48px] lg:text-[10vh] color-gold text-center">
+              Schedule
+            </h1>
+
+            <div className="flex items-center justify-center mt-4">
+              <p className="font-poppins text-[20px] lg:text-[30px] text-white">
+                coming soon!!!
+              </p>
+            </div>
+          </div>
+        </PageContainer>
+      );
+    }
+  }
 
   return (
     <PageContainer>
