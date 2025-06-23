@@ -35,50 +35,54 @@ export const FAQSection = () => {
 const FAQ_CONTENT = [
   {
     q: "What is HackGT?",
-    a: "HackGT is HexLabs' free, 36-hour, annual hackathon where students from across the world come together for a weekend in the fall to create innovative projects that show off their creativity and passion for development. You have the freedom to choose any platform, programming language, or format to show how you build solutions. Participating in this event will widen your professional network, build your portfolio, and allow you to put your creativity into production! With tech talks and workshops, you will also have the opportunity to talk to and learn from professionals in various industries. We encourage everyone to be a part of our hacker community at HackGT 11 regardless of location, major, or prior hacking experience.",
+    a: "HackGT is HexLabs' free, 36-hour, annual hackathon where students from across the world come together for a weekend in the fall to create innovative projects that show off their creativity and passion for development. You have the freedom to choose any platform, programming language, or format to show how you build solutions.\nParticipating in this event will widen your professional network, build your portfolio, and allow you to put your creativity into production! With tech talks and workshops, you will also have the opportunity to talk to and learn from professionals in various industries. We encourage everyone to be a part of our hacker community at HackGT 12 regardless of location, major, or prior hacking experience.",
   },
   {
     q: "When does registration open?",
-    a: "Registration opens July 22nd! This year, we have 2 rounds of applications; take a look at the Registration section below for more about this! Keep an eye out on our socials and subscribe to our newsletter for more information, coming soon 👀",
+    a: "Registration opens July 21st! This year, we have 2 rounds of applications: early bird and regular. Keep an eye out on our socials and subscribe to our newsletter for more information, coming soon 👀",
   },
   {
     q: "It's my first hackathon. Should I apply?",
-    a: "Yes! Experience is not required. Hackathons are open creative and learning environments for everyone. If you are new to hackathons, the Emerging Hacker track may be for you!",
+    a: "Yes! Experience is not required. Hackathons are open creative and learning environments for everyone. If you are new to hackathons, the Emerging track may be for you!",
   },
   {
     q: "Did you say “FREE”?",
-    a: "Yes! HackGT is completely free to attend. We will provide you with food, a place to hack, swag, and fun activities throughout the weekend!",
+    a: "YES! Once you're on GT's campus, HackGT 12 is completely free to participants and mentors thanks to our sponsors. Free food, free swag, free vibes. 😇 If you will be traveling from afar, we offer reimbursements to GT, but transportation would be your only cost otherwise.",
   },
   {
     q: "Will hardware be provided?",
-    a: "Yes! We have a hardware lab with a variety of devices you can borrow throughout the event. We will release more information about what we’ll have as the event approaches.",
+    a: "We have a hardware desk with a variety of devices you can borrow throughout the event. We will release more information about what we’ll have as the event approaches.",
   },
   {
     q: "What do I need for the event?",
-    a: "All you need is your computer, charger, a valid ID (like a driver’s license or school ID), and your creativity!",
+    a: "We recommend bringing a laptop, charger, headphones, and anything else you'll need over the weekend. We'll provide hardware, meals, snacks, swag, and ~good vibes~.",
   },
   {
     q: "What projects can I make?",
-    a: "Anything you want! You can build something technical, artistic, hardware-based, or design-oriented. There are no limits!",
+    a: "You can make anything you want! If you want more direction, we will have sponsor challenges and HackGT 12 tracks for both General and Emerging participants. However, you may not submit your past projects to HackGT. We will send out an event packet containing project submission rules closer to September.",
   },
   {
     q: "I’m not a solo hacker. How can I make a team?",
-    a: "You can form teams ahead of time or at the event during our team formation activities. We’ll help you meet others with similar interests!",
+    a: "No worries; we love multi-person hacker groups! We will host a team formation event after opening ceremony. You can also form a team with anyone! Teams can have up to four members. You are welcome to apply to either Emerging or Advanced track levels for each prize. Look out for more information about our team matching portal coming soon!",
   },
   {
     q: "What are the prizes? Is there swag?",
-    a: "Yes! We’ll have prizes for track winners, sponsor challenges, and mini-events. We’ll also be giving out lots of swag throughout the weekend!",
+    a: "If you win a prize, we will make sure you get it no matter where in the world you are! We'll announce more info on prizes soon. HackGT 12 swag will be distributed during the event and there will be more opportunities to win exclusive items from winning activities or using points from event participation to redeem additional aesthetic swag. More information coming soon!",
   },
   {
     q: "Who is eligible to mentor/volunteer?",
-    a: "Anyone with a passion for helping hackers and experience in tech, event planning, or logistics is welcome to apply to be a mentor or volunteer!",
+    a: "Anyone can mentor or volunteer. If you are interested in helping participants through their projects, then apply as a mentor. If you are interested in helping us run the event, then apply as a volunteer.",
   },
   {
     q: "Are we assigned mentors?",
-    a: "Not exactly—mentors roam around and are also available at the Help Desk. You can request help at any time during the hackathon.",
+    a: "Mentorship will be in an office hours style format. Participants can submit questions via a virtual queue and meet mentors 1:1.",
+  },
+  {
+    q: "Want to sponsor?",
+    a: "Contact us at sponsorship@hexlabs.org for more information"
   },
   {
     q: "I have more questions…",
-    a: "Feel free to reach out to us on Discord or email us at hello@hexlabs.org!",
+    a: "Contact us at hello@hexlabs.org",
   },
 ];
