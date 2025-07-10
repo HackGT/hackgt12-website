@@ -140,7 +140,7 @@ function App() {
 
             <img
               className="pillar1 hidden lg:block z-50"
-              src="/about_pillar.png"
+              src="/about_pillar.webp"
             ></img>
 
             <div id="tracks">
@@ -154,7 +154,7 @@ function App() {
 
             <img
               className="pillar2 hidden lg:block"
-              src="/about_pillar.png"
+              src="/about_pillar.webp"
             ></img>
 
             <div id="schedule">
@@ -163,7 +163,7 @@ function App() {
           </div>
 
           <img
-            src="/about_floor.png"
+            src="/about_floor.webp"
             alt="________"
             className="horiz-scroll-floor hidden lg:block"
           />

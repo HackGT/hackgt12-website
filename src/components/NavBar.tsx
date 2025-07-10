@@ -162,9 +162,9 @@ const SpotlightImage = ({
   className: string;
   type: string;
 }) => {
-  let src = "/spotlight_to_right.png";
+  let src = "/spotlight_to_right.webp";
   if (type === "left") {
-    src = "/spotlight_to_left.png";
+    src = "/spotlight_to_left.webp";
   }
   return (
     <img
