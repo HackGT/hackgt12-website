@@ -12,7 +12,7 @@ export const Footer = () => {
         </a>
       </p>
 
-      <img src="/footer.png" alt="footer graphic" className="w-full" />
+      <img src="/footer.webp" alt="footer graphic" className="w-full" />
     </div>
   );
 };

@@ -1,0 +1,79 @@
+# HackGT 12
+
+## Basic Information
+- Name: HackGT 12
+- Type: Annual hackathon event
+- Website: https://hack.gt
+- Organization: HexLabs
+- Organization Website: https://hexlabs.org
+
+## Event Details
+- Dates: September 26-28, 2025
+- Duration: 36 hours
+- Location: Georgia Institute of Technology, Atlanta, Georgia, USA
+- Expected Participants: 1,500+ hackers from around the world
+- Cost: Free for participants (food, swag, hardware included)
+
+## Registration
+- Registration Opens: July 21st, 2025
+- Application Rounds: Early bird and regular
+- Tracks Available: General and Emerging (for beginners)
+- Team Size: Up to 4 members per team
+- Team Formation: Supported with team matching portal and formation events
+
+## What Participants Get
+- Free meals throughout the event
+- Free swag and merchandise
+- Access to hardware lending library
+- Mentorship in office hours format
+- Workshops and tech talks
+- Networking opportunities with industry professionals
+- Prize opportunities through sponsor challenges and HackGT tracks
+
+## Key Features
+- Platform agnostic: Any programming language, platform, or format allowed
+- No prior experience required
+- Transportation reimbursements available for distant travelers
+- Hardware desk with variety of devices for borrowing
+- Sponsor challenges and prizes
+- Professional networking opportunities
+
+## Target Audience
+- College and university students
+- High school students
+- First-time hackers welcome
+- Experienced developers
+- Anyone passionate about innovation and development
+
+## Organization - HexLabs
+- Description: Student-led, nonprofit organization at Georgia Tech
+- Mission: Spread opportunity for innovation to high school and college students
+- Focus: Large-scale hackathons that cultivate enrichment and growth
+- Partnership: Works with companies to provide learning opportunities
+
+## Contact Information
+- General Inquiries: hello@hexlabs.org
+- Sponsorship: sponsorship@hexlabs.org
+- Social Media: @HackGT (Twitter)
+
+## Content Sections
+1. Hero/Landing - Event announcement and registration
+2. About - Event details and what HackGT offers
+3. Tracks - General and Emerging track information
+4. Schedule/Timeline - Event timeline with activities
+5. FAQ - Comprehensive frequently asked questions
+6. Sponsors - Partner companies and organizations
+7. Footer - Additional links and contact information
+
+## FAQ Highlights
+- Experience level: All levels welcome, beginners encouraged
+- Project requirements: Must be new projects created during the event
+- Hardware: Provided via hardware lending desk
+- Mentorship: Available in office hours format with virtual queue
+- Prizes: Multiple categories including sponsor challenges
+- Teams: Formation supported, up to 4 members
+
+## Key Dates
+- Registration Opens: July 21st, 2025
+- Event Dates: September 26-28, 2025
+- Location: Georgia Tech campus, Atlanta, GA

@@ -129,7 +129,7 @@ export const TracksPageMobile = () => {
 
         <FloorShownOnSmall />
         <img
-          src="/camera.png"
+          src="/camera.webp"
           alt="security camera"
           className="right-0 absolute top-22 w-[60px] h-auto"
         />
