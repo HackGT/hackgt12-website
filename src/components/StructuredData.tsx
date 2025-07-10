@@ -29,7 +29,8 @@ export const StructuredData = () => {
       "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "validFrom": "2025-07-21T00:00:00-04:00"
+      "validFrom": "2025-07-21T00:00:00-04:00",
+      "url": "https://hack.gt"
     },
     "image": "https://hack.gt/home.webp",
     "url": "https://hack.gt"
@@ -45,11 +46,6 @@ export const StructuredData = () => {
     "foundingLocation": {
       "@type": "Place",
       "name": "Georgia Institute of Technology"
-    },
-    "event": {
-      "@type": "Event",
-      "name": "HackGT 12",
-      "url": "https://hack.gt"
     }
   };
 
