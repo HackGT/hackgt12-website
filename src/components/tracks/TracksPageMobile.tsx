@@ -12,7 +12,7 @@ export const TracksPageMobile = () => {
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
-        <h1 className="mt-[10vh] mb-4 font-cormo font-bold text-5xl text-theme-gold absolute left-1/2 -translate-x-1/2">
+        <h1 className="mt-[10vh] mb-4 font-cormo font-bold text-5xl text-gold absolute left-1/2 -translate-x-1/2">
           Tracks
         </h1>
         
@@ -129,9 +129,9 @@ export const TracksPageMobile = () => {
 
         <FloorShownOnSmall />
         <img
-          src="/camera.png"
-          alt="security camera"
-          className="right-0 absolute top-22 w-[60px] h-auto"
+          src="/security_camera.svg"
+          alt=""
+          className="transform-[scaleX(-1)] right-0 absolute top-22 w-[60px] h-auto"
         />
       </div>
     </div>

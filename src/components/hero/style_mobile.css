@@ -1,0 +1,22 @@
+.hackgt12-text {
+	font-family: "The Seasons";
+	color: var(--color-gold-light);
+	font-weight: 500;
+	font-size: min(5vh, 8vw);
+	line-height: 1.2;
+}
+
+.title-text {
+	font-family: "The Seasons";
+	color: var(--color-gold);
+	font-weight: 500;
+	font-size: min(12vh, 16vw);
+	line-height: 0.8;
+}
+
+.atthe-text {
+	font-family: "The Seasons";
+	color: var(--color-gold-dark);
+	font-weight: 500;
+	font-size: min(5vh, 8vw);
+}

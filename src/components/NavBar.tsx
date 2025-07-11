@@ -34,21 +34,13 @@ export const NavBar = ({
         <SpotlightImage className="right-[22%]" type="left" />
       </div>
 
-      <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 flex justify-center gap-12 items-center">
+      <div className="hidden lg:flex max-w-7xl z-100 mx-auto mt-12 justify-center gap-20 items-center">
         <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
         <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
         <NavLink title="Tracks" sectionId="tracks" onNavigate={onNavigate} />
-        <NavLink
-          title="Schedule"
-          sectionId="schedule"
-          onNavigate={onNavigate}
-        />
+        <NavLink title="Schedule" sectionId="schedule" onNavigate={onNavigate} />
         <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
-        <NavLink
-          title="Sponsors"
-          sectionId="sponsors"
-          onNavigate={onNavigate}
-        />
+        <NavLink title="Sponsors" sectionId="sponsors" onNavigate={onNavigate} />
       </div>
 
       <MobileNavMenu className="flex lg:hidden" onNavigate={onNavigate} />
@@ -68,7 +60,7 @@ const MobileNavMenu = ({
     <div
       className={twMerge(
         "max-w-7xl mx-auto flex-col justify-between items-center px-4 py-2 transition-all",
-        isOpen ? "backdrop-blur-md" : "", // Apply background and blur here when not at top
+        isOpen ? "backdrop-blur-md bg-[#0004]" : "", // Apply background and blur here when not at top
         className
       )}
     >
@@ -81,21 +73,21 @@ const MobileNavMenu = ({
           {/* Top bar */}
           <span
             className={twMerge(
-              "block w-8 h-1 bg-theme-gold rounded-full transition-all duration-300 ease-in-out",
+              "block w-8 h-1 bg-gold rounded-full transition-all duration-300 ease-in-out",
               isOpen ? "rotate-45 translate-y-2.5" : ""
             )}
           ></span>
           {/* Middle bar */}
           <span
             className={twMerge(
-              "block w-8 h-1 bg-theme-gold rounded-full transition-all duration-300 ease-in-out my-1.5", // Added margin for spacing
+              "block w-8 h-1 bg-gold rounded-full transition-all duration-300 ease-in-out my-1.5", // Added margin for spacing
               isOpen ? "opacity-0" : "" // Fade out
             )}
           ></span>
           {/* Bottom bar */}
           <span
             className={twMerge(
-              "block w-8 h-1 bg-theme-gold rounded-full transition-all duration-300 ease-in-out",
+              "block w-8 h-1 bg-gold rounded-full transition-all duration-300 ease-in-out",
               isOpen ? "-rotate-45 -translate-y-2.5" : "" // Rotate and move up
             )}
           ></span>
@@ -113,22 +105,10 @@ const MobileNavMenu = ({
           <div className="flex flex-col items-center gap-6">
             <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
             <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
-            <NavLink
-              title="Tracks"
-              sectionId="tracks"
-              onNavigate={onNavigate}
-            />
-            <NavLink
-              title="Schedule"
-              sectionId="schedule"
-              onNavigate={onNavigate}
-            />
+            <NavLink title="Tracks" sectionId="tracks" onNavigate={onNavigate} />
+            <NavLink title="Schedule" sectionId="schedule" onNavigate={onNavigate} />
             <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
-            <NavLink
-              title="Sponsors"
-              sectionId="sponsors"
-              onNavigate={onNavigate}
-            />
+            <NavLink title="Sponsors" sectionId="sponsors" onNavigate={onNavigate} />
           </div>
         </div>
       )}
@@ -148,28 +128,16 @@ const NavLink = ({
   return (
     <button
       onClick={() => onNavigate(sectionId)}
-      className="font-cormo w-full lg:w-fit text-center text-[24px] lg:text-[4.5vh] font-bold text-theme-gold hover:brightness-150 transition hover:cursor-pointer "
+      className="font-cormo w-full lg:w-fit text-center text-[1.5rem] lg:text-[3.2vh] font-semibold text-gold hover:brightness-150 transition hover:cursor-pointer "
     >
       {title}
     </button>
   );
 };
 
-const SpotlightImage = ({
-  className,
-  type,
-}: {
-  className: string;
-  type: string;
-}) => {
-  let src = "/spotlight_to_right.png";
-  if (type === "left") {
-    src = "/spotlight_to_left.png";
-  }
-  return (
-    <img
-      src={src}
-      className={twMerge("absolute w-50 pointer-events-none", className)}
-    />
-  );
-};
+const SpotlightImage = (props: {className: string, type: "right" | "left"}) => (
+  <img
+    src={`/spotlights/spotlight_to_${props.type}.png`}
+    className={twMerge("absolute w-50 pointer-events-none", props.className)}
+  />
+);

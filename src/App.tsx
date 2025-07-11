@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from "react"; // Import useState
 import "./App.css";
+import "./index.css";
+
+import { useEffect, useRef, useState } from "react"; // Import useState
 import { NavBar } from "./components/NavBar";
 import { AboutPage } from "./components/about/AboutPage";
 import { HeroPage } from "./components/hero/HeroPage";
@@ -11,6 +13,8 @@ import TimelinePage from "./components/timeline/TimelinePage";
 import { TracksPageMobile } from "./components/tracks/TracksPageMobile";
 import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
 import { HeroPageMobile } from "./components/hero/HeroPageMobile";
+
+const HORIZ_SCROLL_SPEED_MULTIPLIER = 0.5;
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,15 +47,11 @@ function App() {
       if (!container || !content) return;
 
       const rect = container.getBoundingClientRect();
-      const startY = window.scrollY + rect.top;
-      const scrollY = window.scrollY;
-      const scrollProgress = scrollY - startY;
 
-      // Ensure maxScroll calculation accounts for potential differences in container height if not explicitly 300vh
-      const maxScroll = container.offsetHeight - window.innerHeight;
-      const percent = Math.min(scrollProgress / maxScroll, 1);
-
-      content.style.transform = `translateX(-${percent * 200}vw)`;
+      // i did the math trust me bro
+      const scrollProgress = -rect.top / (window.innerHeight * (3 / HORIZ_SCROLL_SPEED_MULTIPLIER - 1));
+      const clampedScrollProgress = Math.max(Math.min(scrollProgress, 1), 0);
+      content.style.transform = `translateX(-${clampedScrollProgress * 200}vw)`;
     };
 
     if (isLargeScreen) {
@@ -123,14 +123,14 @@ function App() {
       {/* Horizontal scroll section */}
       <section
         ref={containerRef}
-        // Conditionally apply h-[300vh] for horizontal scroll effect on large screens
-        className={`relative ${isLargeScreen ? "h-[300vh]" : "h-auto"}`}
+        style={{height: isLargeScreen? `${300 / HORIZ_SCROLL_SPEED_MULTIPLIER}vh` : "auto"}}
+        className='relative'
       >
         <div className="sticky top-0 overflow-hidden lg:h-screen h-fit">
           <div
             ref={contentRef}
             // Conditionally apply horizontal scroll styles on large screens
-            className={`position-relative snap-x bg-green-400 transition-transform ease-out scroll-smooth ${
+            className={`relative snap-x bg-green-400 transition-transform ease-out scroll-smooth ${
               isLargeScreen ? "flex w-[300vw]" : "block w-full"
             }`}
           >
@@ -138,32 +138,27 @@ function App() {
               <AboutPage />
             </div>
 
-            <img
+            {/*<img
               className="pillar1 hidden lg:block z-50"
-              src="/about_pillar.png"
-            ></img>
+              src="/about/about_pillar.png"
+            ></img>*/}
 
             <div id="tracks">
-              <div className="hidden lg:block">
-                <TracksPage />
-              </div>
-              <div className="block lg:hidden">
-                <TracksPageMobile />
-              </div>
+              {isLargeScreen? <TracksPage /> : <TracksPageMobile />}
             </div>
 
-            <img
+            {/*<img
               className="pillar2 hidden lg:block"
-              src="/about_pillar.png"
-            ></img>
+              src="/about/about_pillar.png"
+            ></img>*/}
 
             <div id="schedule">
-              {isLargeScreen ? <TimelinePage /> : <TimelinePageThin />}
+              {isLargeScreen? <TimelinePage /> : <TimelinePageThin />}
             </div>
           </div>
 
           <img
-            src="/about_floor.png"
+            src="/about/about_floor.png"
             alt="________"
             className="horiz-scroll-floor hidden lg:block"
           />

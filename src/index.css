@@ -1,0 +1,9 @@
+@font-face {
+	font-family: "The Seasons";
+	src: url("/seasons_font/theseasons-reg.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+.font-seasons {
+	font-family: "The Seasons", sans-serif;
+}
