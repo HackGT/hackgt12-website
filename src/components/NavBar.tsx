@@ -137,7 +137,7 @@ const NavLink = ({
 
 const SpotlightImage = (props: {className: string, type: "right" | "left"}) => (
   <img
-    src={`/spotlights/spotlight_to_${props.type}.png`}
+    src={`/spotlights/spotlight_to_${props.type}.webp`}
     className={twMerge("absolute w-50 pointer-events-none", props.className)}
   />
 );

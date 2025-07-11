@@ -13,6 +13,8 @@ import TimelinePage from "./components/timeline/TimelinePage";
 import { TracksPageMobile } from "./components/tracks/TracksPageMobile";
 import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin";
 import { HeroPageMobile } from "./components/hero/HeroPageMobile";
+import { SEOMetaTags } from "./components/SEOMetaTags";
+import { StructuredData } from "./components/StructuredData";
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = 0.5;
 
@@ -115,6 +117,8 @@ function App() {
 
   return (
     <div>
+      <SEOMetaTags />
+      <StructuredData />
       <NavBar onNavigate={scrollToSection} />
       {/* Vertical scroll before */}
 
@@ -137,20 +141,30 @@ function App() {
               <AboutPage />
             </div>
 
-            <img className="pillar1 hidden lg:block z-50" src="/about/about_pillar.png" />
+            <img
+              className="pillar1 hidden lg:block z-50"
+              src="/about/about_pillar.webp"
+            ></img>
 
             <div id="tracks">
               {isLargeScreen? <TracksPage /> : <TracksPageMobile />}
             </div>
 
-            <img className="pillar2 hidden lg:block" src="/about/about_pillar.png" />
+            <img
+              className="pillar2 hidden lg:block"
+              src="/about/about_pillar.webp"
+            ></img>
 
             <div id="schedule">
               {isLargeScreen? <TimelinePage /> : <TimelinePageThin />}
             </div>
           </div>
 
-          <img src="/about/about_floor.png" className="horiz-scroll-floor hidden lg:block" />
+          <img
+            src="/about/about_floor.webp"
+            alt="________"
+            className="horiz-scroll-floor hidden lg:block"
+          />
         </div>
       </section>
 

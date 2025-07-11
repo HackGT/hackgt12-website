@@ -49,17 +49,17 @@ export const AboutPage = () => {
       {/* Decorative elements at the bottom */}
       <div className="absolute bottom-0 left-0 w-full h-[200px] pointer-events-none">
         <img
-          src="/about/about_plant.png"
-          alt=""
+          src="/about/about_plant.webp"
+          alt="plant"
           className="absolute bottom-[3vh] left-16 w-[100px] "
         />
         <img
-          src="/about/about_bear.png"
+          src="/about/about_bear.webp"
           alt="bear"
           className="hidden lg:block absolute bottom-[3.6vh] z-40 right-3/10 lg:w-[200px]"
         />
         <img
-          src="/about/about_bear_mobile.png"
+          src="/about/about_bear_mobile.webp"
           alt="bear"
           className="lg:hidden absolute bottom-[3.6vh] z-40 right-3/10 w-[150px]"
         />

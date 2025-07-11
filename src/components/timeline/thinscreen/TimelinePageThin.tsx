@@ -124,8 +124,8 @@ const TimelinePageThin = () => {
           {/* yes translateY by vw is intentional here, its cuz the img sizes depend on vw and not vh */}
           <img
             className="w-[40vw] translate-y-[1vw]"
-            src="/timeline/timeline_bear.png"
-            alt=""
+            src="/timeline/timeline_bear.webp"
+            alt="beardell!"
           />
           <img
             className="w-[20vw] translate-y-[3vw]"
@@ -135,7 +135,7 @@ const TimelinePageThin = () => {
         </div>
         <img
           className="tl-page-thin-floor"
-          src="/about/about_floor.png"
+          src="/about/about_floor.webp"
           alt="______"
         />
       </div>
