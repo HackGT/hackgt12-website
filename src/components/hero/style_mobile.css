@@ -1,22 +1,40 @@
 .hackgt12-text {
-	font-family: "The Seasons";
 	color: var(--color-gold-light);
-	font-weight: 500;
 	font-size: min(5vh, 8vw);
 	line-height: 1.2;
 }
 
 .title-text {
-	font-family: "The Seasons";
 	color: var(--color-gold);
-	font-weight: 500;
 	font-size: min(12vh, 16vw);
 	line-height: 0.8;
 }
 
 .atthe-text {
-	font-family: "The Seasons";
 	color: var(--color-gold-dark);
-	font-weight: 500;
 	font-size: min(5vh, 8vw);
+}
+
+.date-text {
+	font-family: "Poppins", sans-serif;
+	color: var(--color-gold);
+	font-weight: 500;
+	font-size: min(3vh, 4vw);
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.interest-form-button {
+	background-color: var(--color-gold);
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	color: #771500;
+	border-radius: 1.5rem;
+	padding: 0.5rem 1.75rem;
+	font-size: min(3vh, 5vw);
+	cursor: pointer;
+	transition: filter 0.2s ease-in-out;
+}
+.interest-form-button:hover {
+	filter: brightness(110%);
 }

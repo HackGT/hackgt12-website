@@ -20,13 +20,14 @@ export const HeroPageMobile = () => {
         alt="bg column"
       />
       
-      <div className="absolute w-full flex flex-col items-center text-center mt-[20vh]">
+      <div className="font-seasons absolute w-full flex flex-col items-center text-center mt-[20vh]">
+
         <div className="flex w-full items-center justify-center text-[8vw] mb-4">
           <img src="/logo.png" alt="HackGT 12" className="w-[0.9em]" />
           <h3 className="hackgt12-text">&ensp;HackGT 12</h3>
         </div>
 
-        <div className="w-full z-5">
+        <div className="w-full z-15 font-medium">
           <div>
             <h2 className="title-text">
               MIDNIGHT
@@ -39,10 +40,10 @@ export const HeroPageMobile = () => {
             </h2>
           </div>
 
-          <h2 className="font-poppins color-gold text-[4vw] mt-2 mb-8">
+          <h2 className="date-text">
             September 26-28, 2025
           </h2>
-          <button onClick={handleClick} className="bg-gold font-poppins font-medium text-[#771500] rounded-3xl px-7 py-1 text-[5vw] cursor-pointer hover:brightness-110 transition">
+          <button onClick={handleClick} className="interest-form-button">
             Interest Form
           </button>
         </div>
@@ -65,7 +66,7 @@ export const HeroPageMobile = () => {
 
       <img
         src="/hero/dino.svg"
-        className="absolute right-0 bottom-0 z-10 max-h-[48vh]"
+        className="absolute right-0 bottom-0 z-10 max-h-[40vh]"
         alt="Dino"
       />
     </section>

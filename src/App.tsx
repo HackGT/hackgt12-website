@@ -127,9 +127,8 @@ function App() {
         className='relative'
       >
         <div className="sticky top-0 overflow-hidden lg:h-screen h-fit">
-          <div
+          <div 
             ref={contentRef}
-            // Conditionally apply horizontal scroll styles on large screens
             className={`relative snap-x bg-green-400 transition-transform ease-out scroll-smooth ${
               isLargeScreen ? "flex w-[300vw]" : "block w-full"
             }`}
@@ -138,30 +137,20 @@ function App() {
               <AboutPage />
             </div>
 
-            {/*<img
-              className="pillar1 hidden lg:block z-50"
-              src="/about/about_pillar.png"
-            ></img>*/}
+            <img className="pillar1 hidden lg:block z-50" src="/about/about_pillar.png" />
 
             <div id="tracks">
               {isLargeScreen? <TracksPage /> : <TracksPageMobile />}
             </div>
 
-            {/*<img
-              className="pillar2 hidden lg:block"
-              src="/about/about_pillar.png"
-            ></img>*/}
+            <img className="pillar2 hidden lg:block" src="/about/about_pillar.png" />
 
             <div id="schedule">
               {isLargeScreen? <TimelinePage /> : <TimelinePageThin />}
             </div>
           </div>
 
-          <img
-            src="/about/about_floor.png"
-            alt="________"
-            className="horiz-scroll-floor hidden lg:block"
-          />
+          <img src="/about/about_floor.png" className="horiz-scroll-floor hidden lg:block" />
         </div>
       </section>
 
