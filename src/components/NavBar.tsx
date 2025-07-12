@@ -38,9 +38,17 @@ export const NavBar = ({
         <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
         <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
         <NavLink title="Tracks" sectionId="tracks" onNavigate={onNavigate} />
-        <NavLink title="Schedule" sectionId="schedule" onNavigate={onNavigate} />
+        <NavLink
+          title="Schedule"
+          sectionId="schedule"
+          onNavigate={onNavigate}
+        />
         <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
-        <NavLink title="Sponsors" sectionId="sponsors" onNavigate={onNavigate} />
+        <NavLink
+          title="Sponsors"
+          sectionId="sponsors"
+          onNavigate={onNavigate}
+        />
       </div>
 
       <MobileNavMenu className="flex lg:hidden" onNavigate={onNavigate} />
@@ -105,10 +113,22 @@ const MobileNavMenu = ({
           <div className="flex flex-col items-center gap-6">
             <NavLink title="Home" sectionId="home" onNavigate={onNavigate} />
             <NavLink title="About" sectionId="about" onNavigate={onNavigate} />
-            <NavLink title="Tracks" sectionId="tracks" onNavigate={onNavigate} />
-            <NavLink title="Schedule" sectionId="schedule" onNavigate={onNavigate} />
+            <NavLink
+              title="Tracks"
+              sectionId="tracks"
+              onNavigate={onNavigate}
+            />
+            <NavLink
+              title="Schedule"
+              sectionId="schedule"
+              onNavigate={onNavigate}
+            />
             <NavLink title="FAQ" sectionId="faqs" onNavigate={onNavigate} />
-            <NavLink title="Sponsors" sectionId="sponsors" onNavigate={onNavigate} />
+            <NavLink
+              title="Sponsors"
+              sectionId="sponsors"
+              onNavigate={onNavigate}
+            />
           </div>
         </div>
       )}
@@ -135,7 +155,10 @@ const NavLink = ({
   );
 };
 
-const SpotlightImage = (props: {className: string, type: "right" | "left"}) => (
+const SpotlightImage = (props: {
+  className: string;
+  type: "right" | "left";
+}) => (
   <img
     src={`/spotlights/spotlight_to_${props.type}.webp`}
     className={twMerge("absolute w-50 pointer-events-none", props.className)}
