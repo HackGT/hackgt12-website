@@ -36,8 +36,10 @@
 }
 
 .fall-down-hinge-topleft {
+	opacity: 1;
 	animation: hinge-topleft 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
 .fall-down-hinge-topright {
-	animation: hinge-topright 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+	opacity: 1;
+	animation: hinge-topright 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }

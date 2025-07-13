@@ -1,7 +1,7 @@
 import { FloorShownOnSmall } from "../FloorShownOnSmall";
 import './style.css';
 
-export const AboutPage = () => {
+export const AboutPage = (props: {addHingeAnimation: boolean}) => {
   return (
     <section className="w-full h-full relative py-24 lg:py-8 px-16 flex items-center justify-items-center snap-start bg-gradient-to-b from-[#020F27] to-[#0D3582] overflow-hidden">
       
@@ -40,24 +40,24 @@ export const AboutPage = () => {
         </div>
 
         {/* images */}
-        <div className="sm:w-3/4 md:w-3/5 lg:w-full my-auto order-2 lg:order-last flex flex-col justify-center justify-self-center">
+        <div className="sm:w-3/4 md:w-3/5 lg:w-full xl:w-5/6 my-auto order-2 lg:order-last flex flex-col justify-center justify-self-center">
           <div className="w-full h-1/2 flex justify-center items-end">
             <img
               src="/about/about_pic_1.svg"
               alt="about us!"
-              className="w-1/2 mt-2 lg:mt-0 fall-down-hinge-topleft"
+              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topleft" : ""}`}
             />
             <img
               src="/about/about_pic_2.png"
               alt="about us!"
-              className="w-1/2 mt-2 lg:mt-0 fall-down-hinge-topright delay-500"
+              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topright" : ""}`}
             />
           </div>
           <div className="w-full h-1/2 flex justify-center items-center">
             <img
               src="/about/about_pic_3.svg"
               alt="about us!"
-              className="w-5/6 mt-2 lg:mt-0 fall-down-hinge-topleft delay-1000"
+              className={`w-5/6 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topleft" : ""}`}
             />
           </div>
         </div>

@@ -19,10 +19,17 @@ import { ArrowDown } from "lucide-react";
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = 0.5;
 
+// when to play the hinge animation on the about page
+const ABOUT_PAGE_HINGE_ANIMATION_THRESHOLD = window.innerHeight * 0.5;
+
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const scrollToExploreRef = useRef<HTMLDivElement>(null);
+
+  // the hinge animation should only play once when the user FIRST scrolls there.
+  // set to true once they pass the threshold and the animation has played once
+  const [aboutPageHingeAnimationDone, setAboutPageHingeAnimationDone] = useState(false);
 
   const [isLargeScreen, setIsLargeScreen] = useState(false); // State to track screen size
 
@@ -44,6 +51,13 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
+
+      // only run once
+      if (!aboutPageHingeAnimationDone) {
+        if (window.scrollY > ABOUT_PAGE_HINGE_ANIMATION_THRESHOLD) {
+          setAboutPageHingeAnimationDone(true);
+        }
+      }
 
       // first manage the opacity of the scroll-to-explore text
       // this should be applied regardless of screen size
@@ -77,7 +91,7 @@ function App() {
     }
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isLargeScreen]); // Re-run effect when isLargeScreen changes
+  }, [aboutPageHingeAnimationDone, isLargeScreen]); // Re-run effect when isLargeScreen changes
 
   const scrollToSection = (sectionId: string) => {
     if (!isLargeScreen) {
@@ -149,7 +163,7 @@ function App() {
             }`}
           >
             <div id="about">
-              <AboutPage />
+              <AboutPage addHingeAnimation={aboutPageHingeAnimationDone} />
             </div>
 
             <img
