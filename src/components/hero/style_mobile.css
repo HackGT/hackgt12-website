@@ -28,7 +28,7 @@
 	background-color: var(--color-gold);
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
-	color: #771500;
+	color: var(--color-brown);
 	border-radius: 1.5rem;
 	padding: 0.5rem 1.75rem;
 	font-size: min(3vh, 5vw);

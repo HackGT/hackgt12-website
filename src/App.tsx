@@ -15,12 +15,14 @@ import TimelinePageThin from "./components/timeline/thinscreen/TimelinePageThin"
 import { HeroPageMobile } from "./components/hero/HeroPageMobile";
 import { SEOMetaTags } from "./components/SEOMetaTags";
 import { StructuredData } from "./components/StructuredData";
+import { ArrowDown } from "lucide-react";
 
 const HORIZ_SCROLL_SPEED_MULTIPLIER = 0.5;
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const scrollToExploreRef = useRef<HTMLDivElement>(null);
 
   const [isLargeScreen, setIsLargeScreen] = useState(false); // State to track screen size
 
@@ -54,6 +56,12 @@ function App() {
       const scrollProgress = -rect.top / (window.innerHeight * (3 / HORIZ_SCROLL_SPEED_MULTIPLIER - 1));
       const clampedScrollProgress = Math.max(Math.min(scrollProgress, 1), 0);
       content.style.transform = `translateX(-${clampedScrollProgress * 200}vw)`;
+
+      // also manage the opacity of the scroll-to-explore text
+      if (scrollToExploreRef.current) {
+        const opacity = 1 - window.scrollY / window.innerHeight;
+        scrollToExploreRef.current.style.opacity = `${opacity}`;
+      }
     };
 
     if (isLargeScreen) {
@@ -116,7 +124,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="relative">
       <SEOMetaTags />
       <StructuredData />
       <NavBar onNavigate={scrollToSection} />
@@ -176,6 +184,15 @@ function App() {
         </div>
         <Footer />
       </section>
+
+      {/* the rotating "scroll to explore" text and arrow thing. 
+      fades to transparent once they scroll a full page height */}
+      <div ref={scrollToExploreRef} className='scroll-arrow-container' onClick={() => scrollToSection("about")}>
+        <img src="/hero/scroll_to_explore_text.png" className='circular-text' />
+        <div className='arrow-icon-container'>
+          <ArrowDown size="4vh" className='arrow-icon' />
+        </div>
+      </div>
     </div>
   );
 }

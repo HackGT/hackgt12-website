@@ -9,7 +9,7 @@ import { isReady } from "../TimelinePage";
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div
-    className={`relative font-cormo w-screen snap-start tlpage-bg flex flex-col items-center justify-center h-screen`}
+    className={`relative font-cormo w-screen snap-start tlpage-bg flex flex-col items-center justify-center h-screennpm `}
   >
     {children}
   </div>

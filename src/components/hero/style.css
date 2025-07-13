@@ -1,19 +1,14 @@
-.hackgt12-text {
-	font-family: "The Seasons";
-	color: var(--color-gold-light);
-}
-
-.title-text {
-	font-family: "The Seasons";
-	color: var(--color-gold);
+.interest-form-btn {
+	background-color: var(--color-gold);
+	font-family: "Poppins";
 	font-weight: 500;
-	font-size: 11vh;
-	line-height: 0.8;
+	color: var(--color-brown);
+	border-radius: 1.5rem;
+	padding: 0.5rem 1.5rem;
+	font-size: 2.5vh;
+	cursor: pointer;
+	transition: filter 0.3s ease;
 }
-
-.atthe-text {
-	font-family: "The Seasons";
-	color: var(--color-gold-dark);
-	font-size: 5vh;
-	font-weight: 500;
+.interest-form-btn:hover {
+	filter: brightness(1.1);
 }

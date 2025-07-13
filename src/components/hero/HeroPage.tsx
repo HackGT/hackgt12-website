@@ -9,21 +9,6 @@ export const HeroPage = () => {
 
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
-      <img
-        src="/hero/bg-column.svg"
-        className="absolute top-0 left-[60%] h-full object-cover z-0"
-        alt="Background column"
-      />
-      <img
-        src="/hero/bg-column.svg"
-        className="absolute top-0 right-0 h-full object-cover z-0 translate-x-[50%]"
-        alt="Background column"
-      />
-      <img
-        src="/hero/bg-column.svg"
-        className="absolute top-0 left-0 h-full object-cover z-0 translate-x-[-20%]"
-        alt="Background column"
-      />
 
       <div className="absolute bottom-0 w-full flex flex-col items-center md:translate-x-[-16%] lg:translate-x-[-19%] xl:translate-x-[-20%]">
         <div className="relative w-auto max-h-[calc(100vh-130px)] md:max-h-[calc(100vh-145px)]">
@@ -40,35 +25,40 @@ export const HeroPage = () => {
           />
 
           {/* middle section w text and allat */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+          <div className="font-seasons absolute inset-0 flex flex-col items-center justify-center text-center">
+
             <div className="flex w-full items-center justify-center text-[5vh] mb-4">
               <img src="/logo.png" alt="HackGT 12" className="w-[0.9em]" />
-              <h3 className="font-seasons color-gold-light">&ensp;HackGT 12</h3>
+              <h3 className="color-gold-light">&ensp;HackGT 12</h3>
             </div>
 
-            <div className="w-full max-w-full px-4">
-              <div>
-                <h2 className="title-text">
-                  MIDNIGHT
-                </h2>
-                <h2 className="atthe-text">
-                  a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e
-                </h2>
-                <h2 className="title-text">
-                  MUSEUM
-                </h2>
-              </div>
+            <h2 className="text-gold text-[11vh] leading-[0.8]">MIDNIGHT</h2>
+            <h2 className="text-gold-dark text-[5vh] text-nowrap">a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e</h2>
+            <h2 className="text-gold text-[11vh] leading-[0.8]">MUSEUM</h2>
 
-              <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-8">
-                September 26-28, 2025
-              </h2>
-              <button onClick={handleClick} className="bg-gold font-poppins font-medium text-[#771500] rounded-3xl px-7 py-1 text-[2.5vh] cursor-pointer hover:brightness-110 transition">
-                Interest Form
-              </button>
-            </div>
+            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-8">September 26-28, 2025</h2>
+            <button onClick={handleClick} className="interest-form-btn">Interest Form</button>
+
           </div>
+
         </div>
       </div>
+
+      <img
+        src="/hero/bg-column.svg"
+        className="absolute top-0 left-[60%] h-full object-cover z-0"
+        alt="Background column"
+      />
+      <img
+        src="/hero/bg-column.svg"
+        className="absolute top-0 right-0 h-full object-cover z-0 translate-x-[50%]"
+        alt="Background column"
+      />
+      <img
+        src="/hero/bg-column.svg"
+        className="absolute top-0 left-0 h-full object-cover z-0 translate-x-[-20%]"
+        alt="Background column"
+      />
 
       <img
         src="/hero/dino.svg"
