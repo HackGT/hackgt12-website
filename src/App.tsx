@@ -44,7 +44,16 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isLargeScreen) return; // Only apply horizontal scroll on large screens
+
+      // first manage the opacity of the scroll-to-explore text
+      // this should be applied regardless of screen size
+      if (scrollToExploreRef.current) {
+        const opacity = 1 - window.scrollY / window.innerHeight;
+        scrollToExploreRef.current.style.opacity = `${opacity}`;
+      }
+
+      // ignore everything else if on mobile since we dont have horiz. scroll there
+      if (!isLargeScreen) return;
 
       const container = containerRef.current;
       const content = contentRef.current;
@@ -56,18 +65,12 @@ function App() {
       const scrollProgress = -rect.top / (window.innerHeight * (3 / HORIZ_SCROLL_SPEED_MULTIPLIER - 1));
       const clampedScrollProgress = Math.max(Math.min(scrollProgress, 1), 0);
       content.style.transform = `translateX(-${clampedScrollProgress * 200}vw)`;
-
-      // also manage the opacity of the scroll-to-explore text
-      if (scrollToExploreRef.current) {
-        const opacity = 1 - window.scrollY / window.innerHeight;
-        scrollToExploreRef.current.style.opacity = `${opacity}`;
-      }
     };
 
-    if (isLargeScreen) {
-      window.addEventListener("scroll", handleScroll);
-    } else {
-      // If not a large screen, ensure any previous transform is reset
+    window.addEventListener("scroll", handleScroll);
+  
+    if (!isLargeScreen) {
+    // If not a large screen, ensure any previous transform is reset
       if (contentRef.current) {
         contentRef.current.style.transform = `translateX(0)`;
       }
