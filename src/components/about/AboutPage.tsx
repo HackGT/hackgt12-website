@@ -1,4 +1,5 @@
 import { FloorShownOnSmall } from "../FloorShownOnSmall";
+import './style.css';
 
 export const AboutPage = () => {
   return (
@@ -21,7 +22,7 @@ export const AboutPage = () => {
               HackGT, HexLabs' annual 36-hour hackathon, is returning to Georgia
               Tech — and this time, it's after hours. From{" "}
               <span className="underline">Friday, September 26th</span> to{" "}
-              <span className="underline">Sunday, September 28th</span>, we’re
+              <span className="underline">Sunday, September 28th</span>, we're
               turning the Klaus Advanced Computing Building into a place where
               creativity, curiosity, and code come alive.
             </p>
@@ -37,10 +38,22 @@ export const AboutPage = () => {
           </div>
 
           <div className="order-2 lg:order-last justify-self-center">
+            <div className="flex justify-between align-baseline w-full h-2/3">
+              <img
+                src="/about/about_pic_1.svg"
+                alt="about us!"
+                className="w-1/2 mt-2 lg:mt-0 fall-down-hinge-topleft"
+              />
+              <img
+                src="/about/about_pic_2.png"
+                alt="about us!"
+                className="w-1/2 mt-2 lg:mt-0 fall-down-hinge-topright delay-500"
+              />
+            </div>
             <img
-              src="/about/about_pics.svg"
+              src="/about/about_pic_3.svg"
               alt="about us!"
-              className="w-auto max-h-[70vh] mt-2 lg:mt-0"
+              className="w-full mt-2 lg:mt-0 fall-down-hinge-topleft delay-1000"
             />
           </div>
         </div>
