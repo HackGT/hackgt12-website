@@ -64,6 +64,11 @@ function App() {
       if (scrollToExploreRef.current) {
         const opacity = 1 - window.scrollY / window.innerHeight;
         scrollToExploreRef.current.style.opacity = `${opacity}`;
+        if (opacity <= 0) {
+          scrollToExploreRef.current.style.display = "none"; // delete if fully gone (otherwise they can still click)
+        } else {
+          scrollToExploreRef.current.style.display = "flex";
+        }
       }
 
       // ignore everything else if on mobile since we dont have horiz. scroll there
