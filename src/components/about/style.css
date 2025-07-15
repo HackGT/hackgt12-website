@@ -35,11 +35,15 @@
 	}
 }
 
+body {
+	--about-hinge-anim-duration: 1s;
+}
+
 .fall-down-hinge-topleft {
 	opacity: 1;
-	animation: hinge-topleft 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+	animation: hinge-topleft var(--about-hinge-anim-duration) cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
 .fall-down-hinge-topright {
 	opacity: 1;
-	animation: hinge-topright 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	animation: hinge-topright var(--about-hinge-anim-duration) cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
