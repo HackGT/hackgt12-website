@@ -36,7 +36,7 @@ export const HeroPage = () => {
             <h2 className="text-gold-dark text-[5vh] text-nowrap">a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e</h2>
             <h2 className="text-gold text-[11vh] leading-[0.8]">MUSEUM</h2>
 
-            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-8">September 26-28, 2025</h2>
+            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-3">September 26-28, 2025</h2>
             <button onClick={handleClick} className="interest-form-btn">Interest Form</button>
 
           </div>
