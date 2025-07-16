@@ -69,17 +69,17 @@ export const AboutPage = (props: {addHingeAnimation: boolean}) => {
         <img
           src="/about/about_plant.svg"
           alt="plant"
-          className="absolute bottom-[3vh] left-16 w-[140px] "
+          className="absolute bottom-[2vh] left-1/10 w-[100px]"
         />
         <img
           src="/about/about_bear.webp"
           alt="bear"
-          className="hidden lg:block absolute bottom-[3.6vh] z-40 right-3/10 lg:w-[220px]"
+          className="hidden lg:block absolute bottom-[3vh] z-40 right-3/10 lg:w-[220px]"
         />
         <img
           src="/about/about_bear_mobile.webp"
           alt="bear"
-          className="lg:hidden absolute bottom-[3.6vh] z-40 right-3/10 w-[150px]"
+          className="lg:hidden absolute bottom-[3.6vh] z-40 right-1/10 w-[150px]"
         />
         <FloorShownOnSmall />
       </div>

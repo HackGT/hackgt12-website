@@ -20,7 +20,7 @@ import { ArrowDown } from "lucide-react";
 const HORIZ_SCROLL_SPEED_MULTIPLIER = 0.5;
 
 // when to play the hinge animation on the about page
-const ABOUT_PAGE_HINGE_ANIMATION_THRESHOLD = window.innerHeight * 0.5;
+const ABOUT_PAGE_HINGE_ANIMATION_THRESHOLD = window.innerHeight * 0.7;
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
