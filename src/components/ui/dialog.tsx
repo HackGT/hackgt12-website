@@ -63,7 +63,7 @@ function DialogContent({
         className={cn(
           "relative bg-transparent p-0 border-none shadow-none overflow-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-101 focus:outline-none",
           isVertical
-            ? "h-auto w-auto sm:max-h-[576px]"
+            ? "h-auto w-[75vw] max-w-3xs sm:max-h-[576px] sm:max-w-none sm:w-auto"
             : "w-full max-w-[calc(100%-2rem)] sm:max-w-xl",
           className
         )}
@@ -76,7 +76,7 @@ function DialogContent({
           className={cn(
             "pointer-events-none border-none",
             isVertical
-              ? "h-auto w-auto sm:max-h-[576px]"
+              ? "h-auto w-[75vw] max-w-3xs sm:max-h-[576px] sm:max-w-none sm:w-auto"
               : "w-full h-full object-contain"
           )}
         />
