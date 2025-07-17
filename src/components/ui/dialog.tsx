@@ -63,7 +63,7 @@ function DialogContent({
         className={cn(
           "relative bg-transparent p-0 border-none shadow-none overflow-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-101 focus:outline-none",
           isVertical
-            ? "max-h-[72vh] w-auto"
+            ? "h-auto w-auto sm:max-h-[576px]"
             : "w-full max-w-[calc(100%-2rem)] sm:max-w-xl",
           className
         )}
@@ -76,7 +76,7 @@ function DialogContent({
           className={cn(
             "pointer-events-none border-none",
             isVertical
-              ? "max-h-[72vh] w-auto h-auto object-contain"
+              ? "h-auto w-auto sm:max-h-[576px]"
               : "w-full h-full object-contain"
           )}
         />
@@ -88,7 +88,7 @@ function DialogContent({
           }}
           className={cn(
             "absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center z-10 text-center",
-            isVertical ? "mt-8" : ""
+            isVertical ? "mt-6" : ""
           )}
         >
           {children}
@@ -128,7 +128,7 @@ function DialogTitle({
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn("text-2xl sm:text-4xl leading-none font-bold font-seasons", className)}
+      className={cn("text-xl sm:text-4xl leading-none font-bold font-seasons", className)}
       {...props}
     />
   )
@@ -141,7 +141,7 @@ function DialogDescription({
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-brown-dark font-poppins text-base sm:text-lg", className)}
+      className={cn("text-brown-dark font-poppins text-sm sm:text-lg", className)}
       {...props}
     />
   )

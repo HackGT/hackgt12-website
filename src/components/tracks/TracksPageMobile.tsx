@@ -90,7 +90,7 @@ export const TracksPageMobile = () => {
                   className="w-[151px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
                 />
               </DialogTrigger>
-              <DialogContent imageSrc="/tracks/dialog/curators_cause.png" paddingX={23}>
+              <DialogContent imageSrc="/tracks/dialog/curators_cause.png" paddingX={24}>
                 <DialogHeader>
                   <DialogTitle>THE CURATOR&#8217;S CAUSE</DialogTitle>
                   <DialogDescription>
