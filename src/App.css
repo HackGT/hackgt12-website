@@ -52,6 +52,7 @@
 
   /** used for shadows/"inverted" color to the gold */
   --color-brown: #771500;
+  --color-brown-dark: #422309;
 }
 
 .color-gold-dark {

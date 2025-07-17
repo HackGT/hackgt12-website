@@ -27,10 +27,10 @@ export const TracksPageMobile = () => {
                   className="w-[152px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-2"
                 />
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent imageSrc="/tracks/dialog/crypt_of_data.png" paddingX={18}>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Crypt of Data</DialogTitle>
-                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
+                  <DialogTitle>CRYPT OF DATA</DialogTitle>
+                  <DialogDescription>
                     Dig into the depths of data through visualization, analytics, fintech, Web3 innovation, or wherever the numbers lead you.
                   </DialogDescription>
                 </DialogHeader>
@@ -48,10 +48,10 @@ export const TracksPageMobile = () => {
                   className="w-[106px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-1"
                 />
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent imageSrc="/tracks/dialog/gadget_gallery.png" isVertical={true} paddingX={22}>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[3vh]">The Gadget Gallery</DialogTitle>
-                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
+                  <DialogTitle>THE GADGET GALLERY</DialogTitle>
+                  <DialogDescription>
                     Show off your hardware hacks, from robots to smart devices and everything in between.
                   </DialogDescription>
                 </DialogHeader>
@@ -69,10 +69,10 @@ export const TracksPageMobile = () => {
                   className="w-[142px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-2"
                 />
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent imageSrc="/tracks/dialog/hall_of_illusions.png" paddingX={18}>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Hall of Illusions</DialogTitle>
-                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
+                  <DialogTitle>HALL OF ILLUSIONS</DialogTitle>
+                  <DialogDescription>
                     Step into a world of immersive tech, interactive media, and creative storytelling that blurs the line between reality and imagination.
                   </DialogDescription>
                 </DialogHeader>
@@ -90,11 +90,11 @@ export const TracksPageMobile = () => {
                   className="w-[151px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
                 />
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent imageSrc="/tracks/dialog/curators_cause.png" paddingX={24}>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[3vh]">The Curator's Cause</DialogTitle>
-                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
-                    Build solutions that make a difference, whether it’s improving lives, communities, or the environment through tech.
+                  <DialogTitle>THE CURATOR&#8217;S CAUSE</DialogTitle>
+                  <DialogDescription>
+                    Build solutions that make a difference, whether it’s improving lives, communities, or the environment, through tech.
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
@@ -111,10 +111,10 @@ export const TracksPageMobile = () => {
                   className="w-[137px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
                 />
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent imageSrc="/tracks/dialog/emerging.png" paddingX={18}>
                 <DialogHeader>
-                  <DialogTitle className="font-cormo font-semibold text-[3vh]">Emerging</DialogTitle>
-                  <DialogDescription className="font-cormo text-[2.5vh] text-black">
+                  <DialogTitle className="font-seasons text-[3vh] text-brown-dark">EMERGING</DialogTitle>
+                  <DialogDescription>
                     New to hackathons? This track is your launchpad—no experience needed, just curiosity, creativity, and a willingness to build something awesome.
                   </DialogDescription>
                 </DialogHeader>
