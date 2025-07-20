@@ -34,7 +34,7 @@ export const HeroPage = () => {
               September 26-28, 2025
             </h2>
             <a href="https://registration.hexlabs.org" target="_blank">
-              <button className="interest-form-btn">Interest Form</button>
+              <button className="interest-form-btn">Register</button>
             </a>
           </div>
         </div>

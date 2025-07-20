@@ -31,7 +31,7 @@ export const HeroPageMobile = () => {
 
           <h2 className="date-text">September 26-28, 2025</h2>
           <a href="https://registration.hexlabs.org" target="_blank">
-            <button className="interest-form-button">Interest Form</button>
+            <button className="interest-form-button">Register</button>
           </a>
         </div>
       </div>
