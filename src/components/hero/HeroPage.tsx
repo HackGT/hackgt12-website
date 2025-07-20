@@ -1,15 +1,8 @@
-import './style.css';
+import "./style.css";
 
 export const HeroPage = () => {
-  const INTEREST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdOEgnIwjZbRALua5mK8_RbOdu9d6eWzkUrEYyMmTqQLpvb9g/viewform?usp=preview";
-  
-  const handleClick = () => {
-    window.open(INTEREST_URL, "_blank");
-  }
-
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
-
       <div className="absolute bottom-0 w-full flex flex-col items-center md:translate-x-[-16%] lg:translate-x-[-19%] xl:translate-x-[-20%]">
         <div className="relative w-auto max-h-[calc(100vh-130px)] md:max-h-[calc(100vh-145px)]">
           <img
@@ -26,21 +19,24 @@ export const HeroPage = () => {
 
           {/* middle section w text and allat */}
           <div className="font-seasons absolute inset-0 flex flex-col items-center justify-center text-center">
-
             <div className="flex w-full items-center justify-center text-[5vh] mb-4">
               <img src="/logo.png" alt="HackGT 12" className="w-[0.9em]" />
               <h3 className="color-gold-light">&ensp;HackGT 12</h3>
             </div>
 
             <h2 className="text-gold text-[11vh] leading-[0.8]">MIDNIGHT</h2>
-            <h2 className="text-gold-dark text-[5vh] text-nowrap">a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e</h2>
+            <h2 className="text-gold-dark text-[5vh] text-nowrap">
+              a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e
+            </h2>
             <h2 className="text-gold text-[11vh] leading-[0.8]">MUSEUM</h2>
 
-            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-3">September 26-28, 2025</h2>
-            <button onClick={handleClick} className="interest-form-btn">Interest Form</button>
-
+            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-3">
+              September 26-28, 2025
+            </h2>
+            <a href="https://registration.hexlabs.org" target="_blank">
+              <button className="interest-form-btn">Interest Form</button>
+            </a>
           </div>
-
         </div>
       </div>
 

@@ -1,12 +1,6 @@
-import './style_mobile.css';
+import "./style_mobile.css";
 
 export const HeroPageMobile = () => {
-  const INTEREST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdOEgnIwjZbRALua5mK8_RbOdu9d6eWzkUrEYyMmTqQLpvb9g/viewform?usp=preview";
-  
-  const handleClick = () => {
-    window.open(INTEREST_URL, "_blank");
-  }
-
   return (
     <section className="relative h-screen w-full bg-gradient-to-b from-[#0B2557] to-[#795DEC] overflow-hidden">
       <img
@@ -19,9 +13,8 @@ export const HeroPageMobile = () => {
         className="absolute top-0 right-0 h-[100vh] object-cover z-0 translate-x-[50%]"
         alt="bg column"
       />
-      
-      <div className="font-seasons absolute w-full flex flex-col items-center text-center mt-[20vh]">
 
+      <div className="font-seasons absolute w-full flex flex-col items-center text-center mt-[20vh]">
         <div className="flex w-full items-center justify-center text-[8vw] mb-4">
           <img src="/logo.png" alt="HackGT 12" className="w-[0.9em]" />
           <h3 className="hackgt12-text">&ensp;HackGT 12</h3>
@@ -29,23 +22,17 @@ export const HeroPageMobile = () => {
 
         <div className="w-full z-15 font-medium">
           <div>
-            <h2 className="title-text">
-              MIDNIGHT
-            </h2>
+            <h2 className="title-text">MIDNIGHT</h2>
             <h2 className="atthe-text">
               a&emsp;t&emsp;&#x2726;&emsp;t&emsp;h&emsp;e
             </h2>
-            <h2 className="title-text">
-              MUSEUM
-            </h2>
+            <h2 className="title-text">MUSEUM</h2>
           </div>
 
-          <h2 className="date-text">
-            September 26-28, 2025
-          </h2>
-          <button onClick={handleClick} className="interest-form-button">
-            Interest Form
-          </button>
+          <h2 className="date-text">September 26-28, 2025</h2>
+          <a href="https://registration.hexlabs.org" target="_blank">
+            <button className="interest-form-button">Interest Form</button>
+          </a>
         </div>
       </div>
 
