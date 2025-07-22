@@ -47,7 +47,20 @@ const FAQ_CONTENT = [
   },
   {
     q: "Did you say “FREE”?",
-    a: "YES! Once you're on GT's campus, HackGT 12 is completely free to participants and mentors thanks to our sponsors. Free food, free swag, free vibes. 😇 If you will be traveling from afar, we offer reimbursements to GT, but transportation would be your only cost otherwise.",
+    a: (
+      <>
+        YES! Once you're on GT's campus, HackGT 12 is completely free to participants and mentors thanks to our sponsors. Free food, free swag, free vibes. 😇 If you will be traveling from afar, we offer reimbursements to GT, but transportation would be your only cost otherwise. Learn more on our{" "}
+        <a
+          href="https://www.notion.so/hexlabs/HackGT-12-Travel-Assistance-23604380643180de9f5ecacc63b5728b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold hover:underline"
+        >
+          travel guide
+        </a>
+        .
+      </>
+    ),
   },
   {
     q: "Will hardware be provided?",
