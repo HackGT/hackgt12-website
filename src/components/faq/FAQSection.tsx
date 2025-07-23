@@ -47,7 +47,7 @@ const FAQ_CONTENT = [
   },
   {
     q: "How many paths can I apply to?",
-    a: "You are only allowed to apply to one path. We recommend applying to the path that best fits your current skill level and experience. Please note that once you are accepted, you cannot change your path!",
+    a: "You are only allowed to apply to one path. Please select the application path that best fits your needs! Also, note that once you are accepted, you cannot change your path.",
   },
   {
     q: "Did you say “FREE”?",
