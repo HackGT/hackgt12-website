@@ -46,6 +46,10 @@ const FAQ_CONTENT = [
     a: "Yes! Experience is not required. Hackathons are open creative and learning environments for everyone. If you are new to hackathons, the Emerging track may be for you!",
   },
   {
+    q: "How many paths can I apply to?",
+    a: "You are only allowed to apply to one path. We recommend applying to the path that best fits your current skill level and experience. Please note that once you are accepted, you cannot change your path!",
+  },
+  {
     q: "Did you say “FREE”?",
     a: (
       <>
@@ -59,6 +63,23 @@ const FAQ_CONTENT = [
           travel guide
         </a>
         .
+      </>
+    ),
+  },
+  {
+    q: "How will travel reimbursements work?",
+    a: (
+      <>
+        We provide limited reimbursements of up to $50 for gas and up to $200 for flights. Eligible students must be located 50+ miles away from the Klaus Advanced Computing Building at Georgia Tech. Apply by August 12 at 11:59pm EST. See {" "}
+        <a
+          href="https://www.notion.so/hexlabs/HackGT-12-Travel-Assistance-23604380643180de9f5ecacc63b5728b"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gold hover:underline"
+        >
+          here
+        </a>
+        {" "}for the full travel guide.
       </>
     ),
   },
