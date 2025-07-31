@@ -7,8 +7,15 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { FloorShownOnSmall } from "../FloorShownOnSmall";
+import { useState } from "react";
 
 export const TracksPageMobile = () => {
+  const [isHallOpen, setIsHallOpen] = useState(false);
+  const [isGadgetOpen, setIsGadgetOpen] = useState(false);
+  const [isEmergingOpen, setIsEmergingOpen] = useState(false);
+  const [isCuratorOpen, setIsCuratorOpen] = useState(false);
+  const [isCryptOpen, setIsCryptOpen] = useState(false);
+  
   return (
     <div className="snap-start w-screen h-screen" id="room2">
       <div className="relative w-full h-full bg-gradient-to-b from-[#281004] to-[#5b1e19] overflow-hidden">
@@ -19,12 +26,12 @@ export const TracksPageMobile = () => {
         <div className="grid grid-cols-2 gap-y-[5vh] pl-4 my-[22vh] relative z-10">
           {/* Crypt of Data – Left */}
           <div className="flex justify-end mr-[2vw]">
-            <Dialog>
+            <Dialog open={isCryptOpen} onOpenChange={setIsCryptOpen}>
               <DialogTrigger asChild>
                 <img
                   src="/tracks/crypt_of_data.svg"
                   alt="Crypt of Data"
-                  className="w-[152px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-2"
+                  className={`w-[152px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-2 ${isCryptOpen ? "opacity-0 pointer-events-none" : ""}`}
                 />
               </DialogTrigger>
               <DialogContent imageSrc="/tracks/dialog/crypt_of_data.png" paddingX={18}>
@@ -40,12 +47,12 @@ export const TracksPageMobile = () => {
 
           {/* Gadget Gallery – Right (overlapping upward) */}
           <div className="flex justify-start -mb-[9vh] ml-[4vw]">
-            <Dialog>
+            <Dialog open={isGadgetOpen} onOpenChange={setIsGadgetOpen}>
               <DialogTrigger asChild>
                 <img
                   src="/tracks/gadget_gallery.svg"
                   alt="Gadget Gallery"
-                  className="w-[106px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-1"
+                  className={`w-[106px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:-rotate-1 ${isGadgetOpen ? "opacity-0 pointer-events-none" : ""}`}
                 />
               </DialogTrigger>
               <DialogContent imageSrc="/tracks/dialog/gadget_gallery.png" isVertical={true} paddingX={22}>
@@ -61,12 +68,12 @@ export const TracksPageMobile = () => {
 
           {/* Hall of Illusions – Left */}
           <div className="flex justify-end mr-[3vw]">
-            <Dialog>
+            <Dialog open={isHallOpen} onOpenChange={setIsHallOpen}>
               <DialogTrigger asChild>
                 <img
                   src="/tracks/hall_of_illusions.svg"
                   alt="Hall of Illusions"
-                  className="w-[142px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-2"
+                  className={`w-[142px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-2 ${isHallOpen ? "opacity-0 pointer-events-none" : ""}`}
                 />
               </DialogTrigger>
               <DialogContent imageSrc="/tracks/dialog/hall_of_illusions.png" paddingX={18}>
@@ -82,12 +89,12 @@ export const TracksPageMobile = () => {
 
           {/* Curator’s Cause – Right (overlapping upward) */}
           <div className="flex justify-start -mb-[17vh] ml-[2vw]">
-            <Dialog>
+            <Dialog open={isCuratorOpen} onOpenChange={setIsCuratorOpen}>
               <DialogTrigger asChild>
                 <img
                   src="/tracks/curators_cause.svg"
                   alt="Curator’s Cause"
-                  className="w-[151px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
+                  className={`w-[151px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1 ${isCuratorOpen ? "opacity-0 pointer-events-none" : ""}`}
                 />
               </DialogTrigger>
               <DialogContent imageSrc="/tracks/dialog/curators_cause.png" paddingX={24}>
@@ -103,12 +110,12 @@ export const TracksPageMobile = () => {
 
           {/* Emerging – Left */}
           <div className="flex justify-end mr-[3vw]">
-            <Dialog>
+            <Dialog open={isEmergingOpen} onOpenChange={setIsEmergingOpen}>
               <DialogTrigger asChild>
                 <img
                   src="/tracks/emerging.svg"
                   alt="Emerging"
-                  className="w-[137px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1"
+                  className={`w-[137px] cursor-pointer transition-transform duration-300 hover:scale-108 hover:rotate-1 ${isEmergingOpen ? "opacity-0 pointer-events-none" : ""}`}
                 />
               </DialogTrigger>
               <DialogContent imageSrc="/tracks/dialog/emerging.png" paddingX={18}>
