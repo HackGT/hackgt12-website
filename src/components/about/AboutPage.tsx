@@ -1,12 +1,10 @@
 import { FloorShownOnSmall } from "../FloorShownOnSmall";
-import './style.css';
+import "./style.css";
 
-export const AboutPage = (props: {addHingeAnimation: boolean}) => {
+export const AboutPage = (props: { addHingeAnimation: boolean }) => {
   return (
     <section className="w-full h-full relative py-24 lg:py-8 px-16 flex items-center justify-items-center snap-start bg-gradient-to-b from-[#020F27] to-[#0D3582] overflow-hidden">
-      
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-4 items-center z-10">
-        
         <div className="order-1 lg:hidden mb-4">
           <h1 className="font-cormo font-bold text-5xl text-gold text-center mb-2">
             About
@@ -29,13 +27,13 @@ export const AboutPage = (props: {addHingeAnimation: boolean}) => {
             creativity, curiosity, and code come alive.
           </p>
           <p className="text-base md:text-[15px] xl:text-[20px] mt-5 text-white font-poppins">
-            Each year, HackGT welcomes over 1500+ hackers from around the
-            world to tackle novel challenges, win exciting prizes, and make
-            lasting connections! HackGT's halls will be open to everyone,
-            regardless of background, experience, or skill level, to showcase
-            their innovative ideas. Hackers can expect a thrilling weekend
-            filled with networking opportunities, top-tier prizes, engaging
-            mini-events, and lots of swag!
+            Each year, HackGT welcomes over 1500+ hackers from around the world
+            to tackle novel challenges, win exciting prizes, and make lasting
+            connections! HackGT's halls will be open to everyone, regardless of
+            background, experience, or skill level, to showcase their innovative
+            ideas. Hackers can expect a thrilling weekend filled with networking
+            opportunities, top-tier prizes, engaging mini-events, and lots of
+            swag!
           </p>
         </div>
 
@@ -45,23 +43,28 @@ export const AboutPage = (props: {addHingeAnimation: boolean}) => {
             <img
               src="/about/about_pic_1.svg"
               alt="about us!"
-              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topleft" : ""}`}
+              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${
+                props.addHingeAnimation ? "fall-down-hinge-topleft" : ""
+              }`}
             />
             <img
               src="/about/about_pic_2.png"
               alt="about us!"
-              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topright" : ""}`}
+              className={`w-1/2 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${
+                props.addHingeAnimation ? "fall-down-hinge-topright" : ""
+              }`}
             />
           </div>
           <div className="w-full h-1/2 flex justify-center items-center">
             <img
               src="/about/about_pic_3.svg"
               alt="about us!"
-              className={`w-5/6 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${props.addHingeAnimation ? "fall-down-hinge-topleft" : ""}`}
+              className={`w-5/6 mt-2 lg:mt-0 opacity-0 transition-opacity duration-200 ${
+                props.addHingeAnimation ? "fall-down-hinge-topleft" : ""
+              }`}
             />
           </div>
         </div>
-
       </div>
 
       {/* Decorative elements at the bottom */}
@@ -70,11 +73,6 @@ export const AboutPage = (props: {addHingeAnimation: boolean}) => {
           src="/about/about_plant.svg"
           alt="plant"
           className="absolute bottom-[3vh] left-16 w-[140px] "
-        />
-        <img
-          src="/about/about_bear.webp"
-          alt="bear"
-          className="hidden lg:block absolute bottom-[3.6vh] z-40 right-3/10 lg:w-[220px]"
         />
         <img
           src="/about/about_bear_mobile.webp"
