@@ -53,7 +53,11 @@ const FAQ_CONTENT = [
     q: "Did you say “FREE”?",
     a: (
       <>
-        YES! Once you're on GT's campus, HackGT 12 is completely free to participants and mentors thanks to our sponsors. Free food, free swag, free vibes. 😇 If you will be traveling from afar, we offer reimbursements to GT, but transportation would be your only cost otherwise. Learn more on our{" "}
+        YES! Once you're on GT's campus, HackGT 12 is completely free to
+        participants and mentors thanks to our sponsors. Free food, free swag,
+        free vibes. 😇 If you will be traveling from afar, we offer
+        reimbursements to GT, but transportation would be your only cost
+        otherwise. Learn more on our{" "}
         <a
           href="https://www.notion.so/hexlabs/HackGT-12-Travel-Assistance-23604380643180de9f5ecacc63b5728b"
           target="_blank"
@@ -70,7 +74,10 @@ const FAQ_CONTENT = [
     q: "How will travel reimbursements work?",
     a: (
       <>
-        We provide limited reimbursements of up to $50 for gas and up to $200 for flights. Eligible students must be located 50+ miles away from the Klaus Advanced Computing Building at Georgia Tech. Apply by August 12 at 11:59pm EST. See {" "}
+        We provide limited reimbursements of up to $50 for gas and up to $200
+        for flights. Eligible students must be located 50+ miles away from the
+        Klaus Advanced Computing Building at Georgia Tech. Apply by August 12 at
+        11:59pm EST. See{" "}
         <a
           href="https://www.notion.so/hexlabs/HackGT-12-Travel-Assistance-23604380643180de9f5ecacc63b5728b"
           target="_blank"
@@ -78,8 +85,8 @@ const FAQ_CONTENT = [
           className="text-gold hover:underline"
         >
           here
-        </a>
-        {" "}for the full travel guide.
+        </a>{" "}
+        for the full travel guide.
       </>
     ),
   },
@@ -112,8 +119,12 @@ const FAQ_CONTENT = [
     a: "Mentorship will be in an office hours style format. Participants can submit questions via a virtual queue and meet mentors 1:1.",
   },
   {
+    q: "Where do I apply to mentor or judge?",
+    a: "Click the register link and apply to the mentor or judge path.",
+  },
+  {
     q: "Want to sponsor?",
-    a: "Contact us at sponsorship@hexlabs.org for more information"
+    a: "Contact us at sponsorship@hexlabs.org for more information",
   },
   {
     q: "I have more questions…",
