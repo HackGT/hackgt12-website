@@ -5,7 +5,7 @@ import EventCard from "../EventCard";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import EVENTS from "../events.json";
 import ThinTimelineObject from "./ThinTimelineObject";
-import { isReady } from "../TimelinePage";
+//import { isReady } from "../TimelinePage";
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div
@@ -16,17 +16,33 @@ const PageContainer = ({ children }: { children?: React.ReactNode }) => (
 );
 
 const TimelinePageThin = () => {
-  const [selectedDay, setSelectedDay] = useState<1 | 2 | 3>(1);
+  const [selectedDayIdx, setSelectedDayIdx] = useState<number>(0);
   const [selectedEventIdx, setSelectedEventIdx] = useState<number>(0);
 
-  const updateIdx = useCallback(
-    (newIdx: number) => {
-      const numEventsThisDay = EVENTS[selectedDay - 1].length;
-      if (newIdx < 0 || newIdx >= numEventsThisDay) return;
-      else setSelectedEventIdx(newIdx);
-    },
-    [selectedDay]
-  );
+   const updateIdx = useCallback((newIdx: number) => {
+    const numEventsThisDay = EVENTS[selectedDayIdx].length;
+    if (newIdx >= numEventsThisDay) {
+      if (selectedDayIdx < EVENTS.length - 1) {
+        // if we hit the end (rightside) of the day, try to move on to the next day
+        setSelectedDayIdx(selectedDayIdx + 1);
+        setSelectedEventIdx(0);
+      } else {
+        // we are on last day, just do nothing lol
+        return;
+      }
+    } else if (newIdx < 0) {
+      if (selectedDayIdx > 0) {
+        // if we hit the end (leftside) of the day, try to move on to the previous day
+        setSelectedDayIdx(selectedDayIdx - 1);
+        setSelectedEventIdx(0);
+      } else {
+        return;
+      }
+    } else {
+      // normal case
+      setSelectedEventIdx(newIdx);
+    }
+  }, [selectedDayIdx]);
 
   // flash effect when switching selectedEventIdx
   useEffect(() => {
@@ -43,25 +59,23 @@ const TimelinePageThin = () => {
     };
   }, [selectedEventIdx]);
 
-  if (!isReady) {
-    if (!isReady) {
-      return (
-        <PageContainer>
-          <div className="flex flex-col items-center my-16">
-            <h1 className="font-cormo font-bold text-[48px] lg:text-[10vh] color-gold text-center">
-              Schedule
-            </h1>
+  /*if (!isReady) {
+    return (
+      <PageContainer>
+        <div className="flex flex-col items-center my-16">
+          <h1 className="font-cormo font-bold text-[48px] lg:text-[10vh] color-gold text-center">
+            Schedule
+          </h1>
 
-            <div className="flex items-center justify-center mt-4">
-              <p className="font-poppins text-[20px] lg:text-[30px] text-white">
-                coming soon!!!
-              </p>
-            </div>
+          <div className="flex items-center justify-center mt-4">
+            <p className="font-poppins text-[20px] lg:text-[30px] text-white">
+              coming soon!!!
+            </p>
           </div>
-        </PageContainer>
-      );
-    }
-  }
+        </div>
+      </PageContainer>
+    );
+  }*/
 
   return (
     <PageContainer>
@@ -69,43 +83,47 @@ const TimelinePageThin = () => {
         <h1 className="font-cormo font-bold text-5xl color-gold w-full text-center my-4">
           Schedule
         </h1>
-        <div className="day-selector-thin">
-          {[1, 2, 3].map((n) => (
-            <div
-              key={n}
-              className={`day-selector-thin-option ${
-                selectedDay === n ? "selected" : ""
-              }`}
-              onClick={() => {
-                setSelectedDay(n as 1 | 2 | 3);
-                setSelectedEventIdx(0);
-              }}
-            >
-              Day {n}
-            </div>
-          ))}
+        
+        <div>
+          <div className="day-date-display-thin">Day {selectedDayIdx + 1} - September {26 + selectedDayIdx}, 2025</div>
+          <div className="day-selector-thin">
+            {Array.from({ length: EVENTS.length }, (_, i) => i).map((n) => (
+              <div
+                key={n}
+                className={`day-selector-thin-option ${
+                  selectedDayIdx === n ? "selected" : ""
+                }`}
+                onClick={() => {
+                  setSelectedDayIdx(n);
+                  setSelectedEventIdx(0);
+                }}
+              >
+                Day {n+1}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="w-full">
-          <EventCard day={selectedDay} idx={selectedEventIdx} />
-          <div className="flex gap-8 mt-4 justify-center">
+        <div className="w-full flex flex-col items-center">
+          <EventCard dayIdx={selectedDayIdx} eventIdx={selectedEventIdx} />
+          <div className="flex gap-8 mt-4 items-center justify-center">
             <button
-              className="eventcard-rounded-button-small"
-              onClick={() => updateIdx(selectedEventIdx - 1)}
-            >
+            disabled={selectedEventIdx === 0 && selectedDayIdx === 0}
+            className="eventcard-rounded-button-small"
+            onClick={() => updateIdx(selectedEventIdx - 1)}>
               <ArrowLeft size="1.75rem" />
             </button>
             <button
-              className="eventcard-rounded-button-small"
-              onClick={() => updateIdx(selectedEventIdx + 1)}
-            >
+            disabled={selectedEventIdx === EVENTS[selectedDayIdx].length - 1 && selectedDayIdx === EVENTS.length - 1}
+            className="eventcard-rounded-button-small"
+            onClick={() => updateIdx(selectedEventIdx + 1)}>
               <ArrowRight size="1.75rem" />
             </button>
           </div>
         </div>
 
         <div className="flex flex-col gap-6 w-full grow overflow-y-auto">
-          {EVENTS[selectedDay - 1].map((ele, index) => (
+          {EVENTS[selectedDayIdx].map((ele, index) => (
             <ThinTimelineObject
               onClick={() => setSelectedEventIdx(index)}
               number={index + 1}

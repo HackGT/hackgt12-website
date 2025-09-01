@@ -21,7 +21,6 @@
 	background-color: var(--color-gold);
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 .tl-object-wrapper:hover .tl-object-label {
 	color: #ffdd9f;
@@ -56,6 +55,10 @@
 	cursor: pointer;
 	transition: transform 0.1s ease-out;
 }
+.eventcard-rounded-button-small:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
 
 .day-selector-thin {
 	display: flex;
@@ -83,4 +86,11 @@
 .day-selector-thin-option.selected {
 	background-color: #003427;
 	color: white;
+}
+.day-date-display-thin {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #eac786;
+	margin-bottom: 0.5rem;
+	text-align: center;
 }

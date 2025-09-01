@@ -28,21 +28,27 @@
 	color: white;
 }
 
+.day-date-display {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #eac786;
+	margin-bottom: 1rem;
+}
+
 .eventcard {
 	background-color: white;
 	border-radius: 16px;
 	overflow: hidden;
-	max-width: min(100%, 500px);
-	margin: 0 auto;
+	width: min(100%, 500px);
 }
 .eventcard-title {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.3em;
-	font-size: 2.5rem;
+	font-size: min(2.5rem, 8vw);
 	font-weight: 700;
-	padding: 0.2em 1.2em;
+	padding: 0.2em;
 	background-color: #B5C5C3;
 	text-align: center;
 }
@@ -61,13 +67,14 @@
 	height: fit-content;
 	width: fit-content;
 	cursor: pointer;
-	transition: transform 0.1s ease-out;
+	transition: filter 0.1s;
 }
-.floatright-on-hover:hover {
-	transform: translateX(5px);
+.eventcard-rounded-button:enabled:hover {
+	filter: brightness(0.9);
 }
-.floatleft-on-hover:hover {
-	transform: translateX(-5px);
+.eventcard-rounded-button:disabled {
+	opacity: 0.3;
+	cursor: default;
 }
 
 /* ACTUAL TIMELINE */
@@ -136,6 +143,7 @@
 	position: relative;
 	z-index: 100;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 .tl-object-wrapper:hover .tl-object-label {
 	color: #ffdd9f;

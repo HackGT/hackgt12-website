@@ -12,10 +12,10 @@ type ThinTimelineObjectExtraProps = {
 // ez
 const ThinTimelineObject = (props: TimelineObject_t & ThinTimelineObjectExtraProps) => {
 	return (
-		<div className='thin-tl-object'>
+		<div className='thin-tl-object' onClick={props.onClick} style={props.style}>
 			<div className='thin-tl-object-number font-poppins'>{props.number}</div>
-			<h3 className='thin-tl-object-title'>{props.name}: {props.time}</h3>
-			<img className='tl-object-icon' src={props.icon_path} />
+			<h3 className='thin-tl-object-title'>{props.time} - {props.name}</h3>
+			{/* (no space bruh) props.icon_path && <img className='tl-object-icon' src={props.icon_path} />*/}
 		</div>
 	);
 };

@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import EVENTS from "./events.json";
 import TimelineObject, { type TimelineObject_t } from "./TimelineObject";
 
-export const isReady = false;
+export const isReady = true;
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div className="font-cormo w-screen snap-start h-screen tlpage-bg flex items-center justify-center">
@@ -34,33 +34,52 @@ function partitionInto2Arrays<T>(parentArray: T[]): [T[], T[]] {
 }
 
 const TimelinePage = () => {
-  const [selectedDay, setSelectedDay] = useState<1 | 2 | 3>(1);
+  const [selectedDayIdx, setSelectedDayIdx] = useState<number>(0);
   const [selectedEventIdx, setSelectedEventIdx] = useState<number>(0);
 
   const [timelineHalves, setTimelineHalves] = useState(
     partitionInto2Arrays<TimelineObject_t>(
-      EVENTS[selectedDay - 1] as TimelineObject_t[]
+      EVENTS[selectedDayIdx] as TimelineObject_t[]
     )
   );
 
-  const updateIdx = useCallback(
-    (newIdx: number) => {
-      const numEventsThisDay = EVENTS[selectedDay - 1].length;
-      if (newIdx < 0 || newIdx >= numEventsThisDay) return;
-      else setSelectedEventIdx(newIdx);
-    },
-    [selectedDay]
-  );
+  console.log(`timeline page: ${selectedDayIdx}, ${selectedEventIdx}`);
 
+  const updateIdx = useCallback((newIdx: number) => {
+    const numEventsThisDay = EVENTS[selectedDayIdx].length;
+    if (newIdx >= numEventsThisDay) {
+      if (selectedDayIdx < EVENTS.length - 1) {
+        // if we hit the end (rightside) of the day, try to move on to the next day
+        setSelectedDayIdx(selectedDayIdx + 1);
+        setSelectedEventIdx(0);
+      } else {
+        // we are on last day, just do nothing lol
+        return;
+      }
+    } else if (newIdx < 0) {
+      if (selectedDayIdx > 0) {
+        // if we hit the end (leftside) of the day, try to move on to the previous day
+        setSelectedDayIdx(selectedDayIdx - 1);
+        setSelectedEventIdx(0);
+      } else {
+        return;
+      }
+    } else {
+      // normal case
+      setSelectedEventIdx(newIdx);
+    }
+  }, [selectedDayIdx]);
+
+  // setup timeline halves
   useEffect(() => {
     const newHalves = partitionInto2Arrays<TimelineObject_t>(
-      EVENTS[selectedDay - 1] as TimelineObject_t[]
+      EVENTS[selectedDayIdx] as TimelineObject_t[]
     );
     setTimelineHalves(newHalves);
     setSelectedEventIdx(
-      Math.min(EVENTS[selectedDay - 1].length - 1, selectedEventIdx)
+      Math.min(EVENTS[selectedDayIdx].length - 1, selectedEventIdx)
     );
-  }, [selectedDay, selectedEventIdx]);
+  }, [selectedDayIdx, selectedEventIdx]);
 
   // flash effect when switching selectedEventIdx
   useEffect(() => {
@@ -77,7 +96,7 @@ const TimelinePage = () => {
     };
   }, [selectedEventIdx]);
 
-  if (!isReady) {
+  /*if (!isReady) {
     return (
       <PageContainer>
         <div className="flex flex-col items-center">
@@ -93,23 +112,26 @@ const TimelinePage = () => {
         </div>
       </PageContainer>
     );
-  }
+  }*/
 
   return (
     <PageContainer>
       <div className="flex flex-col items-center" id="#schedule">
-        <div className="flex gap-8 items-center">
+
+        <div className="day-date-display">Day {selectedDayIdx + 1} - September {26 + selectedDayIdx}, 2025</div>
+
+        <div className="flex w-full gap-8 items-center justify-center">
           <button
-            className="eventcard-rounded-button floatleft-on-hover"
-            onClick={() => updateIdx(selectedEventIdx - 1)}
-          >
+          disabled={selectedEventIdx === 0 && selectedDayIdx === 0}
+          className="eventcard-rounded-button"
+          onClick={() => updateIdx(selectedEventIdx - 1)}>
             <ArrowLeft size="2.5rem" />
           </button>
-          <EventCard day={selectedDay} idx={selectedEventIdx} />
+          <EventCard dayIdx={selectedDayIdx} eventIdx={selectedEventIdx} />
           <button
-            className="eventcard-rounded-button floatright-on-hover"
-            onClick={() => updateIdx(selectedEventIdx + 1)}
-          >
+          disabled={selectedEventIdx === EVENTS[selectedDayIdx].length - 1 && selectedDayIdx === EVENTS.length - 1}
+          className="eventcard-rounded-button"
+          onClick={() => updateIdx(selectedEventIdx + 1)}>
             <ArrowRight size="2.5rem" />
           </button>
         </div>
@@ -119,7 +141,7 @@ const TimelinePage = () => {
             <div
               style={{
                 transform: `translateX(${
-                  EVENTS[selectedDay - 1].length % 2 === 0 ? "-3" : 0
+                  EVENTS[selectedDayIdx].length % 2 === 0 ? "-3" : 0
                 }rem)`,
               }}
               className="timeline-group top"
@@ -140,7 +162,7 @@ const TimelinePage = () => {
             <div
               style={{
                 transform: `translateX(${
-                  EVENTS[selectedDay - 1].length % 2 === 0 ? "3" : 0
+                  EVENTS[selectedDayIdx].length % 2 === 0 ? "3" : 0
                 }rem)`,
               }}
               className="timeline-group bottom"
@@ -160,19 +182,20 @@ const TimelinePage = () => {
             </div>
           </div>
         </div>
+
         <div className="day-selector">
-          {[1, 2, 3].map((n) => (
+          {Array.from({ length: EVENTS.length }, (_, i) => i).map((n) => (
             <div
               key={n}
               className={`day-selector-option ${
-                selectedDay === n ? "selected" : ""
+                selectedDayIdx === n ? "selected" : ""
               }`}
               onClick={() => {
-                setSelectedDay(n as 1 | 2 | 3);
+                setSelectedDayIdx(n);
                 setSelectedEventIdx(0);
               }}
             >
-              Day {n}
+              Day {n+1}
             </div>
           ))}
         </div>

@@ -24,7 +24,7 @@ const TimelineObject = (props: TimelineObject_t & ExtraProps) => {
 		style={props.style}>
 			<div className='tl-object-number font-poppins'>{props.number}</div>
 			<div className='tl-object-label'>{props.name}: {props.time}</div>
-			<img className='tl-object-icon' src={props.icon_path} />
+			{props.icon_path && <img className='tl-object-icon' src={props.icon_path} />}
 		</div>
 	);
 };

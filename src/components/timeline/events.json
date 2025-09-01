@@ -1,22 +1,15 @@
 [
 	[
-		{"name": "D1E1", "desc": "desc for d1e1", "time": "8AM", "icon_path": "/about/about_plant.webp"}, 
-		{"name": "D1E2", "desc": "desc for d1e2", "time": "9AM", "icon_path": "/about/about_plant.webp"}, 
-		{"name": "D1E3", "desc": "desc for d1e3", "time": "10AM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D1E4", "desc": "desc for d1e4", "time": "5PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D1E5", "desc": "desc for d1e5", "time": "6PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D1E6", "desc": "desc for d1e6", "time": "7PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D1E7", "desc": "desc for d1e7", "time": "8PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D1E8", "desc": "desc for d1e8", "time": "9PM", "icon_path": "/about/about_plant.webp"}
+		{"name": "Check-in", "desc": "Friday, 2PM EST at the <b>Ferst Center for the Arts</b>", "time": "2PM", "icon_path": "/timeline/event_icons/guide.svg"},
+		{"name": "Opening Ceremony", "desc": "The official kickoff for <b>HACKGT 12!</b>", "time": "4PM", "icon_path": "/about/about_bear_mobile.webp"},
+		{"name": "Hacking Start", "desc": "Start hacking by 8PM Friday night!", "time": "8PM", "icon_path": "/timeline/event_icons/plan.svg"}
 	],
 	[
-		{"name": "D2E1", "desc": "desc for d2e1", "time": "11AM", "icon_path": "/about/about_plant.webp"}, 
-		{"name": "D2E2", "desc": "desc for d2e2", "time": "12PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D2E3", "desc": "desc for d2e3", "time": "1PM", "icon_path": "/about/about_plant.webp"}
+
 	],
 	[
-		{"name": "D3E1", "desc": "desc for d3e1", "time": "2PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D3E2", "desc": "desc for d3e2", "time": "3PM", "icon_path": "/about/about_plant.webp"},
-		{"name": "D3E3", "desc": "desc for d3e3", "time": "4PM", "icon_path": "/about/about_plant.webp"}
+		{"name": "Hacking Ends", "desc": "Get ready to finalize your amazing projects by 8AM!", "time": "8AM", "icon_path": "/timeline/event_icons/helmet.svg"},
+		{"name": "Judging Expo", "desc": "Judging takes place from 9:30AM to 11AM!", "time": "11AM", "icon_path": "/timeline/event_icons/trophy.svg"},
+		{"name": "Closing Ceremony", "desc": "Winners will be announced at 1PM EST at the <b>Ferst Center for the Arts</b>!", "time": "1PM", "icon_path": "/timeline/event_icons/trophy.svg"}
 	]
 ]
