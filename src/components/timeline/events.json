@@ -1,11 +1,15 @@
 [
 	[
-		{"name": "Check-in", "desc": "Friday, 1PM EST at the <b>Ferst Center for the Arts</b>", "time": "1PM", "icon_path": "/about/about_bear_mobile.webp"}
+		{"name": "Check-in", "desc": "Friday, 2PM EST at the <b>Ferst Center for the Arts</b>", "time": "2PM", "icon_path": "/about/about_bear_mobile.webp"},
+		{"name": "Opening Ceremony", "desc": "The official kickoff for <b>HackGT 12!</b>", "time": "4PM", "icon_path": "/about/about_bear_mobile.webp"},
+		{"name": "Hacking Start!", "desc": "Get hacking!", "time": "8PM", "icon_path": "/about/about_bear_mobile.webp"}
 	],
 	[
 
 	],
 	[
+		{"name": "Hacking Ends!", "desc": "Get ready to finalize your amazing projects by 8AM!", "time": "8AM", "icon_path": "/about/about_bear_mobile.webp"},
+		{"name": "Judging Expo", "desc": "Judging takes place from 9:30AM to 11AM!", "time": "11AM", "icon_path": "/about/about_bear_mobile.webp"},
 		{"name": "Closing Ceremony", "desc": "Winners will be announced at 1PM EST at the <b>Ferst Center for the Arts</b>!", "time": "1PM", "icon_path": ""}
 	]
 ]
