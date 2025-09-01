@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import EVENTS from "./events.json";
 import TimelineObject, { type TimelineObject_t } from "./TimelineObject";
 
-export const isReady = false;
+export const isReady = true;
 
 const PageContainer = ({ children }: { children?: React.ReactNode }) => (
   <div className="font-cormo w-screen snap-start h-screen tlpage-bg flex items-center justify-center">

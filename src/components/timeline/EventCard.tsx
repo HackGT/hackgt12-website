@@ -8,11 +8,10 @@ const EventCard = ({day, idx}: {day: number, idx: number}) => {
 	return (
 		<div className='eventcard'>
 			<div className='eventcard-title'>
-				{eventObj.name}
-				<img className='eventcard-icon' src={eventObj.icon_path} />
+				{eventObj?.name ?? "No Events Here Yet!"}
+				{eventObj?.icon_path && <img className='eventcard-icon' src={eventObj.icon_path} />}
 			</div>
-			<div className='eventcard-desc font-poppins'>
-				{eventObj.desc}
+			<div className='eventcard-desc font-poppins' dangerouslySetInnerHTML={{__html: eventObj?.desc ?? "Check back later for updates!"}}>
 			</div>
 		</div>
 	);
