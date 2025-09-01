@@ -123,14 +123,14 @@ const TimelinePage = () => {
         <div className="flex gap-8 items-center justify-center">
           <button
           disabled={selectedEventIdx === 0 && selectedDayIdx === 0}
-          className="eventcard-rounded-button floatleft-on-hover"
+          className="eventcard-rounded-button"
           onClick={() => updateIdx(selectedEventIdx - 1)}>
             <ArrowLeft size="2.5rem" />
           </button>
           <EventCard dayIdx={selectedDayIdx} eventIdx={selectedEventIdx} />
           <button
           disabled={selectedEventIdx === EVENTS[selectedDayIdx].length - 1 && selectedDayIdx === EVENTS.length - 1}
-          className="eventcard-rounded-button floatright-on-hover"
+          className="eventcard-rounded-button"
           onClick={() => updateIdx(selectedEventIdx + 1)}>
             <ArrowRight size="2.5rem" />
           </button>

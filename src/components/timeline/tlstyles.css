@@ -69,21 +69,9 @@
 	cursor: pointer;
 	transition: transform 0.1s ease-out;
 }
-.floatright-on-hover:hover {
-	transform: translateX(5px);
-}
-.floatleft-on-hover:hover {
-	transform: translateX(-5px);
-}
 .eventcard-rounded-button:disabled {
 	opacity: 0.3;
 	cursor: default;
-}
-.eventcard-rounded-button:disabled.floatright-on-hover:hover {
-	transform: none;
-}
-.eventcard-rounded-button:disabled.floatleft-on-hover:hover {
-	transform: none;
 }
 
 /* ACTUAL TIMELINE */
