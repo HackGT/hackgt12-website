@@ -1,9 +1,9 @@
 import './tlstyles.css';
 import EVENTS from './events.json';
 
-const EventCard = ({day, idx}: {day: number, idx: number}) => {
+const EventCard = ({dayIdx, eventIdx}: {dayIdx: number, eventIdx: number}) => {
 
-	const eventObj = EVENTS[day-1][idx]; // has 'name' and 'desc' fields (see ./events.json)
+	const eventObj = EVENTS[dayIdx][eventIdx]; // has 'name' and 'desc' fields (see ./events.json)
 
 	return (
 		<div className='eventcard'>

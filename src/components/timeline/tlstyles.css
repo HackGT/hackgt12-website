@@ -33,7 +33,6 @@
 	border-radius: 16px;
 	overflow: hidden;
 	max-width: min(100%, 500px);
-	margin: 0 auto;
 }
 .eventcard-title {
 	display: flex;
@@ -68,6 +67,16 @@
 }
 .floatleft-on-hover:hover {
 	transform: translateX(-5px);
+}
+.eventcard-rounded-button:disabled {
+	opacity: 0.3;
+	cursor: default;
+}
+.eventcard-rounded-button:disabled.floatright-on-hover:hover {
+	transform: none;
+}
+.eventcard-rounded-button:disabled.floatleft-on-hover:hover {
+	transform: none;
 }
 
 /* ACTUAL TIMELINE */

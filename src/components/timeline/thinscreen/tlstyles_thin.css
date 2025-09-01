@@ -56,6 +56,10 @@
 	cursor: pointer;
 	transition: transform 0.1s ease-out;
 }
+.eventcard-rounded-button-small:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
 
 .day-selector-thin {
 	display: flex;
