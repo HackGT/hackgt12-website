@@ -39,16 +39,16 @@
 	background-color: white;
 	border-radius: 16px;
 	overflow: hidden;
-	max-width: min(100%, 500px);
+	width: min(100%, 500px);
 }
 .eventcard-title {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.3em;
-	font-size: 2.5rem;
+	font-size: min(2.5rem, 8vw);
 	font-weight: 700;
-	padding: 0.2em 1.2em;
+	padding: 0.2em;
 	background-color: #B5C5C3;
 	text-align: center;
 }

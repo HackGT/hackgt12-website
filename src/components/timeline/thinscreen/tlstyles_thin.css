@@ -21,7 +21,6 @@
 	background-color: var(--color-gold);
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 .tl-object-wrapper:hover .tl-object-label {
 	color: #ffdd9f;

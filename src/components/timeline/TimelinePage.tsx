@@ -120,7 +120,7 @@ const TimelinePage = () => {
 
         <div className="day-date-display">Day {selectedDayIdx + 1} - September {26 + selectedDayIdx}, 2025</div>
 
-        <div className="flex gap-8 items-center justify-center">
+        <div className="flex w-full gap-8 items-center justify-center">
           <button
           disabled={selectedEventIdx === 0 && selectedDayIdx === 0}
           className="eventcard-rounded-button"
