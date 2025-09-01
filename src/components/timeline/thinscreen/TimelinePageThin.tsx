@@ -83,21 +83,25 @@ const TimelinePageThin = () => {
         <h1 className="font-cormo font-bold text-5xl color-gold w-full text-center my-4">
           Schedule
         </h1>
-        <div className="day-selector-thin">
-          {Array.from({ length: EVENTS.length }, (_, i) => i).map((n) => (
-            <div
-              key={n}
-              className={`day-selector-thin-option ${
-                selectedDayIdx === n ? "selected" : ""
-              }`}
-              onClick={() => {
-                setSelectedDayIdx(n);
-                setSelectedEventIdx(0);
-              }}
-            >
-              Day {n+1}
-            </div>
-          ))}
+        
+        <div>
+          <div className="day-date-display-thin">Day {selectedDayIdx + 1} - September {26 + selectedDayIdx}, 2025</div>
+          <div className="day-selector-thin">
+            {Array.from({ length: EVENTS.length }, (_, i) => i).map((n) => (
+              <div
+                key={n}
+                className={`day-selector-thin-option ${
+                  selectedDayIdx === n ? "selected" : ""
+                }`}
+                onClick={() => {
+                  setSelectedDayIdx(n);
+                  setSelectedEventIdx(0);
+                }}
+              >
+                Day {n+1}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="w-full flex flex-col items-center">

@@ -88,3 +88,10 @@
 	background-color: #003427;
 	color: white;
 }
+.day-date-display-thin {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #eac786;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}

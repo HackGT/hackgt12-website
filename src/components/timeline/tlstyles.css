@@ -28,6 +28,13 @@
 	color: white;
 }
 
+.day-date-display {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #eac786;
+	margin-bottom: 1rem;
+}
+
 .eventcard {
 	background-color: white;
 	border-radius: 16px;
@@ -145,6 +152,7 @@
 	position: relative;
 	z-index: 100;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 .tl-object-wrapper:hover .tl-object-label {
 	color: #ffdd9f;

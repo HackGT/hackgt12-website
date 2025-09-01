@@ -117,6 +117,9 @@ const TimelinePage = () => {
   return (
     <PageContainer>
       <div className="flex flex-col items-center" id="#schedule">
+
+        <div className="day-date-display">Day {selectedDayIdx + 1} - September {26 + selectedDayIdx}, 2025</div>
+
         <div className="flex gap-8 items-center justify-center">
           <button
           disabled={selectedEventIdx === 0 && selectedDayIdx === 0}
@@ -179,6 +182,7 @@ const TimelinePage = () => {
             </div>
           </div>
         </div>
+
         <div className="day-selector">
           {Array.from({ length: EVENTS.length }, (_, i) => i).map((n) => (
             <div
