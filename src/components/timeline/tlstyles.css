@@ -67,7 +67,10 @@
 	height: fit-content;
 	width: fit-content;
 	cursor: pointer;
-	transition: transform 0.1s ease-out;
+	transition: filter 0.1s;
+}
+.eventcard-rounded-button:enabled:hover {
+	filter: brightness(0.9);
 }
 .eventcard-rounded-button:disabled {
 	opacity: 0.3;
