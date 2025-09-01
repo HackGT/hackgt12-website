@@ -42,6 +42,10 @@ const FAQ_CONTENT = [
     a: "Registration opens July 21st! This year, we have 2 rounds of applications: early bird and regular. Keep an eye out on our socials and subscribe to our newsletter for more information, coming soon 👀",
   },
   {
+    q: "Who is eligible to apply as a hacker?",
+    a: "As a hacker, you must be an enrolled college student. Additionally, if you are not a Georgia Tech student, you must be 18 years or older by the day the hackathon starts.",
+  },
+  {
     q: "It's my first hackathon. Should I apply?",
     a: "Yes! Experience is not required. Hackathons are open creative and learning environments for everyone. If you are new to hackathons, the Emerging track may be for you!",
   },
