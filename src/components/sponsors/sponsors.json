@@ -15,6 +15,11 @@
 		"size": "md"
 	},
 	{
+		"name": "MLH",
+		"imgpath": "/sponsors/MLH/mlh-logo-social-square-large-360x240.png",
+		"size": "sm"
+	},
+	{
 		"name": "T-Mobile",
 		"imgpath": "/sponsors/T-Mobile (Medium)/tmobile_logo.png",
 		"size": "sm"
