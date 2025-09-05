@@ -1,0 +1,58 @@
+[
+	{
+		"name": "Prize Picks",
+		"imgpath": "/sponsors/Prize Picks (Large - needs to be the biggest)/Full Logo - Full Color - On Dark.png",
+		"size": "xl"
+	},
+	{
+		"name": "Impericus",
+		"imgpath": "/sponsors/Impericus (Large)/Impiricus_Logo_White_DarkBackgrounds.png",
+		"size": "lg"
+	},
+	{
+		"name": "Capital One",
+		"imgpath": "/sponsors/Capital One (Medium)/C1_Core_NG_RGB_R.png",
+		"size": "md"
+	},
+	{
+		"name": "T-Mobile",
+		"imgpath": "/sponsors/T-Mobile (Medium)/tmobile_logo.png",
+		"size": "sm"
+	},
+	{
+		"name": "Visa",
+		"imgpath": "/sponsors/Visa (Medium)/visa_dark_mode.jpg",
+		"size": "sm"
+	},
+	{
+		"name": "Create-X",
+		"imgpath": "/sponsors/Create-X (Small-Medium)/Create-x-logo-black.png",
+		"size": "sm"
+	},
+	{
+		"name": "Warp",
+		"imgpath": "/sponsors/Warp (Small)/Warp-Wordmark-Black.png",
+		"size": "sm"
+	},
+	{
+		"name": "Twelve Labs",
+		"imgpath": "/sponsors/Twelve Labs (Small)/TL Lockup.png",
+		"size": "sm"
+	},
+	{
+		"name": "Hudson River Trading",
+		"imgpath": "/sponsors/Hudson River Trading (Small)/05 HRT Inline Combo - Positive - Q2 2024.png",
+		"size": "sm"
+	},
+	{
+		"name": "Mixmax",
+		"imgpath": "/sponsors/Mixmax (smaller)/Mixmax.png",
+		"size": "sm"
+	},
+	{
+		"name": "Stevens Capital Management",
+		"imgpath": "/sponsors/Stevens Capital Management (Small)/SCM Blue Logo 3.png",
+		"size": "sm"
+	}
+	
+]

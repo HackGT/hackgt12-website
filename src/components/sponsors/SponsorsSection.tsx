@@ -1,3 +1,6 @@
+import './SponsorsSection.css';
+import sponsors from './sponsors.json';
+
 export const SponsorsSection = () => {
   return (
     <div id="sponsors" className="pt-[20vh]">
@@ -5,10 +8,14 @@ export const SponsorsSection = () => {
         Sponsors
       </h1>
 
-      <div className="min-h-[300px] flex items-center justify-center">
-        <p className="font-poppins text-[20px] lg:text-[30px] text-white">
-          coming soon!!!
-        </p>
+      <div className="sponsors-flex-container">
+        {sponsors.map((sponsor, index) => (
+          <img
+          key={index}
+          className={`sponsor-logo-${sponsor.size}`}
+          src={sponsor.imgpath}
+          alt={sponsor.name} />
+        ))}
       </div>
     </div>
   );
