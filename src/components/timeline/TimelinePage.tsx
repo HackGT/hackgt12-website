@@ -43,8 +43,6 @@ const TimelinePage = () => {
     )
   );
 
-  console.log(`timeline page: ${selectedDayIdx}, ${selectedEventIdx}`);
-
   const updateIdx = useCallback((newIdx: number) => {
     const numEventsThisDay = EVENTS[selectedDayIdx].length;
     if (newIdx >= numEventsThisDay) {

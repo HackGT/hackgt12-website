@@ -10,11 +10,14 @@ export const SponsorsSection = () => {
 
       <div className="sponsors-flex-container">
         {sponsors.map((sponsor, index) => (
-          <img
-          key={index}
-          className={`sponsor-logo-${sponsor.size}`}
-          src={sponsor.imgpath}
-          alt={sponsor.name} />
+          <a 
+          href={sponsor.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={`sponsor-logo-${sponsor.size}`} 
+          key={index}>
+            <img src={sponsor.imgpath} alt={sponsor.name} />
+          </a>
         ))}
       </div>
     </div>

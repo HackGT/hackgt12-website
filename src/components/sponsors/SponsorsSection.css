@@ -9,18 +9,25 @@
 	margin: 0 auto;
 }
 
+.sponsors-flex-container a {
+	transition: filter 0.1s ease;
+}
+.sponsors-flex-container a:hover {
+	filter: brightness(0.8);
+}
+
 .sponsor-logo-xl {
 	width: min(80rem, 100%);
 }
 
 .sponsor-logo-lg {
-	width: min(40rem, 70%);
+	width: min(40rem, 65%);
 }
 
 .sponsor-logo-md {
-	width: min(25rem, 50%);
+	width: min(25rem, 45%);
 }
 
 .sponsor-logo-sm {
-	width: min(15rem, 25%);
+	width: min(15rem, 30%);
 }
