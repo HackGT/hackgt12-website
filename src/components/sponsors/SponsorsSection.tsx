@@ -3,7 +3,7 @@ import sponsors from './sponsors.json';
 
 export const SponsorsSection = () => {
   return (
-    <div id="sponsors" className="pt-[20vh]">
+    <div id="sponsors" className="pt-[10vh]">
       <h1 className="font-cormo font-bold text-[48px] lg:text-[10vh] color-gold text-center">
         Sponsors
       </h1>
