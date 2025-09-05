@@ -4,24 +4,23 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 2rem 8rem;
+	gap: min(2rem, 4vh) min(8rem, 8vw);
 	color: white;
-	width: 90%;
 	margin: 0 auto;
 }
 
 .sponsor-logo-xl {
-	width: min(80rem, 90%);
+	width: min(80rem, 100%);
 }
 
 .sponsor-logo-lg {
-	width: min(40rem, 50%);
+	width: min(40rem, 70%);
 }
 
 .sponsor-logo-md {
-	width: min(25rem, 30%);
+	width: min(25rem, 50%);
 }
 
 .sponsor-logo-sm {
-	width: min(15rem, 15%);
+	width: min(15rem, 25%);
 }
