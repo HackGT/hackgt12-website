@@ -1,0 +1,92 @@
+[
+	{
+		"name": "Prize Picks",
+		"imgpath": "/sponsors/Prize Picks (Large - needs to be the biggest)/Full Logo - Full Color - On Dark.png",
+		"link": "https://www.prizepicks.com/",
+		"size": "xl"
+	},
+	{
+		"name": "Impericus",
+		"imgpath": "/sponsors/Impericus (Large)/Impiricus_Logo_White_DarkBackgrounds.png",
+		"link": "https://impiricus.com/",
+		"size": "lg"
+	},
+	{
+		"name": "Capital One",
+		"imgpath": "/sponsors/Capital One (Medium)/C1_Core_NG_RGB_R.png",
+		"link": "https://www.capitalone.com/",
+		"size": "md"
+	},
+	{
+		"name": "MLH",
+		"imgpath": "/sponsors/MLH/mlh-logo-social-square-large-360x240.png",
+		"link": "https://mlh.io/",
+		"size": "sm"
+	},
+	{
+		"name": "T-Mobile",
+		"imgpath": "/sponsors/T-Mobile (Medium)/tmobile_logo.png",
+		"link": "https://www.t-mobile.com/",
+		"size": "sm"
+	},
+	{
+		"name": "Visa",
+		"imgpath": "/sponsors/Visa (Medium)/visa_dark_mode.jpg",
+		"link": "https://usa.visa.com/",
+		"size": "sm"
+	},
+	{
+		"name": "Create-X",
+		"imgpath": "/sponsors/Create-X (Small-Medium)/Create-x-logo-black.png",
+		"link": "https://create-x.gatech.edu/",
+		"size": "sm"
+	},
+	{
+		"name": "OpenAI Academy",
+		"imgpath": "/sponsors/Open AI (Smaller)/OpenAI Academy logo white.png",
+		"link": "https://academy.openai.com/",
+		"size": "sm"
+	},
+	{
+		"name": "Perplexity",
+		"imgpath": "/sponsors/Perplexity (smaller)/Perplexity-Logo-Color-Horizontal-Dark.svg",
+		"link": "https://www.perplexity.ai/",
+		"size": "sm"
+	},
+	{
+		"name": "Hudson River Trading",
+		"imgpath": "/sponsors/Hudson River Trading (Small)/05 HRT Inline Combo - Positive - Q2 2024.png",
+		"link": "https://www.hudsonrivertrading.com/",
+		"size": "sm"
+	},
+	{
+		"name": "Cedar",
+		"imgpath": "sponsors/Cedar/cedar-logo-dark.png",
+		"link": "https://www.cedar.law/home",
+		"size": "sm"
+	},
+	{
+		"name": "Warp",
+		"imgpath": "/sponsors/Warp (Small)/Warp-Wordmark-Black.png",
+		"link": "https://www.warp.dev/",
+		"size": "sm"
+	},
+	{
+		"name": "Twelve Labs",
+		"imgpath": "/sponsors/Twelve Labs (Small)/TL Lockup.png",
+		"link": "https://www.twelvelabs.io/",
+		"size": "sm"
+	},
+	{
+		"name": "Mixmax",
+		"imgpath": "/sponsors/Mixmax (smaller)/Mixmax.png",
+		"link": "https://www.mixmax.com/",
+		"size": "sm"
+	},
+	{
+		"name": "Stevens Capital Management",
+		"imgpath": "/sponsors/Stevens Capital Management (Small)/SCM Blue Logo 3.png",
+		"link": "https://www.scm-lp.com/",
+		"size": "sm"
+	}
+]

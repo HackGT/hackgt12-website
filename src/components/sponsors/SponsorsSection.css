@@ -1,0 +1,33 @@
+.sponsors-flex-container {
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: min(2rem, 4vh) min(8rem, 8vw);
+	color: white;
+	margin: 0 auto;
+}
+
+.sponsors-flex-container a {
+	transition: filter 0.1s ease;
+}
+.sponsors-flex-container a:hover {
+	filter: brightness(0.8);
+}
+
+.sponsor-logo-xl {
+	width: min(80rem, 100%);
+}
+
+.sponsor-logo-lg {
+	width: min(40rem, 65%);
+}
+
+.sponsor-logo-md {
+	width: min(25rem, 45%);
+}
+
+.sponsor-logo-sm {
+	width: min(15rem, 30%);
+}
