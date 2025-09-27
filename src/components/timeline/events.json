@@ -2,10 +2,16 @@
 	[
 		{"name": "Check-in", "desc": "Friday, 2PM EST at the <b>Ferst Center for the Arts</b>", "time": "2PM", "icon_path": "/timeline/event_icons/guide.svg"},
 		{"name": "Opening Ceremony", "desc": "The official kickoff for <b>HACKGT 12!</b>", "time": "4PM", "icon_path": "/about/about_bear_mobile.webp"},
+		{"name": "Team Formation", "desc": "Don't have a team yet? No worries! Join our team formation session to meet other hackers just like you!", "time": "5:30PM", "icon_path": "/timeline/event_icons/guide.svg"},
+		{"name": "Sponsor Fair", "desc": "Meet our sponsors and learn about their products, services, and career opportunities!", "time": "5:30PM", "icon_path": "/timeline/event_icons/guide.svg"},
 		{"name": "Hacking Start", "desc": "Start hacking by 8PM Friday night!", "time": "8PM", "icon_path": "/timeline/event_icons/plan.svg"}
 	],
 	[
-
+		{"name": "Impericus Mini-Challenge", "desc": "Come compete in a fun challenge with Impiricus!", "time": "2:15PM", "icon_path": "/timeline/event_icons/trophy.svg"},
+		{"name": "PrizePicks Networking", "desc": "Chat with their engineers and recruiters behind the fastest-growing daily fantasy sports platform!", "time": "4:45PM", "icon_path": "/timeline/event_icons/guide.svg"},
+		{"name": "Night at the Museum", "desc": "Step into the museum for our signature Saturday night event! Enjoy popcorn, snow cones, music, painting, mini-games, and so much more after grabbing dinner!", "time": "7PM", "icon_path": "/timeline/event_icons/helmet.svg"},
+		{"name": "Free T-shirts", "desc": "Pick up your official HackGT 12 T-shirt! Sizes range from S to 2XL. Free for everyone, but some sizes may run out so make sure to show up early!", "time": "9PM", "icon_path": "/timeline/event_icons/helmet.svg"},
+		{"name": "Startup Exchange", "desc": "Join SX, a top 3 student founder community in the country, and learn how to turn your hack into a real product! Get advice from the program that sent multiple teams to YC this past year!", "time": "10:15PM", "icon_path": "/timeline/event_icons/guide.svg"}
 	],
 	[
 		{"name": "Hacking Ends", "desc": "Get ready to finalize your amazing projects by 8AM!", "time": "8AM", "icon_path": "/timeline/event_icons/helmet.svg"},
