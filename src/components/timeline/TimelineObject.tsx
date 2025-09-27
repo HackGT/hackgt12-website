@@ -22,9 +22,19 @@ const TimelineObject = (props: TimelineObject_t & ExtraProps) => {
 		id={`tl-object-${props.number}`}
 		className={`tl-object-wrapper ${props.is_on_top? 'is_top' : 'is_bottom'}`} 
 		style={props.style}>
-			<div className='tl-object-number font-poppins'>{props.number}</div>
-			<div className='tl-object-label'>{props.name}: {props.time}</div>
-			{props.icon_path && <img className='tl-object-icon' src={props.icon_path} />}
+			<div className={`tl-object-content ${props.is_on_top? 'is_top' : 'is_bottom'}`}>
+				
+				<div className='flex gap-2 items-center'>
+					<div className='tl-object-number font-poppins'>{props.number}</div>
+					<div className='tl-object-label'>{props.name}</div>
+				</div>
+
+				<div className='flex gap-2 items-center'>
+					{props.icon_path && <img className='tl-object-icon' src={props.icon_path} />}
+					<div className='tl-object-time font-poppins'>{props.time}</div>
+				</div>
+
+			</div>
 		</div>
 	);
 };
