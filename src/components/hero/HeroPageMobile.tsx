@@ -29,9 +29,9 @@ export const HeroPageMobile = () => {
             <h2 className="title-text">MUSEUM</h2>
           </div>
 
-          <h2 className="date-text">September 26-28, 2025</h2>
-          <a href="https://registration.hexlabs.org" target="_blank">
-            <button className="interest-form-button">Register</button>
+          <h2 className="date-text font-bold">HAPPENING NOW!</h2>
+          <a href="https://live.hexlabs.org" target="_blank">
+            <button className="interest-form-button">Live Event Site</button>
           </a>
         </div>
       </div>

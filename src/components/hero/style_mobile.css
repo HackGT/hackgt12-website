@@ -34,6 +34,7 @@
 	font-size: min(3vh, 5vw);
 	cursor: pointer;
 	transition: filter 0.2s ease-in-out;
+	animation: shadow-pulse 1.6s infinite;
 }
 .interest-form-button:hover {
 	filter: brightness(110%);

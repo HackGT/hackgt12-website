@@ -8,6 +8,7 @@
 	font-size: 2.5vh;
 	cursor: pointer;
 	transition: filter 0.3s ease;
+	animation: shadow-pulse 1.6s infinite;
 }
 .interest-form-btn:hover {
 	filter: brightness(1.1);
