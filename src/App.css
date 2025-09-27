@@ -55,6 +55,15 @@
   --color-brown-dark: #422309;
 }
 
+@keyframes shadow-pulse {
+	0% {
+		box-shadow: 0 0 0 0 var(--color-gold-light);
+	}
+	80% {
+		box-shadow: 0 0 0 0.6rem transparent;
+	}
+}
+
 .color-gold-dark {
   color: var(--color-gold-dark);
 }

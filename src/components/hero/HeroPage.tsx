@@ -30,11 +30,11 @@ export const HeroPage = () => {
             </h2>
             <h2 className="text-gold text-[11vh] leading-[0.8]">MUSEUM</h2>
 
-            <h2 className="font-poppins text-gold text-[2.5vh] mt-2 mb-3">
-              September 26-28, 2025
+            <h2 className="font-poppins text-gold font-bold text-[2.5vh] mt-2 mb-3">
+              HAPPENING NOW!
             </h2>
-            <a href="https://registration.hexlabs.org" target="_blank">
-              <button className="interest-form-btn">Register</button>
+            <a href="https://live.hexlabs.org" target="_blank">
+              <button className="interest-form-btn">Live Event Site</button>
             </a>
           </div>
         </div>
