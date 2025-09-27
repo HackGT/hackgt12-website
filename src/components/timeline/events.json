@@ -15,7 +15,7 @@
 	],
 	[
 		{"name": "Hacking Ends", "desc": "Get ready to finalize your amazing projects by 8AM!", "time": "8AM", "icon_path": "/timeline/event_icons/helmet.svg"},
-		{"name": "Judging Expo", "desc": "Judging takes place from 9:30AM to 11AM!", "time": "11AM", "icon_path": "/timeline/event_icons/trophy.svg"},
-		{"name": "Closing Ceremony", "desc": "Winners will be announced at 1PM EST at the <b>Ferst Center for the Arts</b>!", "time": "1PM", "icon_path": "/timeline/event_icons/trophy.svg"}
+		{"name": "Judging Expo", "desc": "Judging takes place from 9AM to 11AM!", "time": "9AM", "icon_path": "/timeline/event_icons/trophy.svg"},
+		{"name": "Closing Ceremony", "desc": "Winners will be announced at 12PM EST at the <b>Ferst Center for the Arts</b>!", "time": "12PM", "icon_path": "/timeline/event_icons/trophy.svg"}
 	]
 ]
