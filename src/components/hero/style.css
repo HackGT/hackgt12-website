@@ -13,3 +13,11 @@
 .interest-form-btn:hover {
 	filter: brightness(1.1);
 }
+
+.thanks {
+	background-color: #0008;
+	border-radius: 0.4rem;
+	padding: 0.2rem 0.6rem;
+	width: fit-content;
+	margin: 0 auto;
+}

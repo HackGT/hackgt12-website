@@ -29,10 +29,12 @@ export const HeroPageMobile = () => {
             <h2 className="title-text">MUSEUM</h2>
           </div>
 
-          <h2 className="date-text font-bold">HAPPENING NOW!</h2>
-          <a href="https://live.hexlabs.org" target="_blank">
-            <button className="interest-form-button">Live Event Site</button>
-          </a>
+          <h2 className="date-text font-bold">September 26-28, 2025</h2>
+          <div>
+            <p className="color-gold-light font-poppins thanks">
+              See you next year! &#9829;
+            </p>
+          </div>
         </div>
       </div>
 
